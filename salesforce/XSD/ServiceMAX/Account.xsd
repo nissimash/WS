@@ -1,0 +1,3844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+<xsd:element name="Account">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="row" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="ObjectID" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Id" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="SOQL" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="WHERE" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Fields" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="type" type="xsd:string" minOccurs="0"/>
+<xsd:element name="Id" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account ID  Filterable. IdLookup. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="IsDeleted" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deleted  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="MasterRecordId" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Master Record ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Name" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Name  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Type" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+<xsd:enumeration value="Bank"/>
+<xsd:enumeration value="Competitor"/>
+<xsd:enumeration value="Contracted Customer"/>
+<xsd:enumeration value="Customer"/>
+<xsd:enumeration value="Defaulted"/>
+<xsd:enumeration value="Distributor"/>
+<xsd:enumeration value="Distributor Customer"/>
+<xsd:enumeration value="Employee"/>
+<xsd:enumeration value="Former Customer"/>
+<xsd:enumeration value="Former Employee"/>
+<xsd:enumeration value="Intercompany"/>
+<xsd:enumeration value="Internal Use Only"/>
+<xsd:enumeration value="Japan Dealer"/>
+<xsd:enumeration value="Japan-partner"/>
+<xsd:enumeration value="Luminary"/>
+<xsd:enumeration value="Prospect"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="RecordTypeId" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Record Type ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ParentId" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Parent Account ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingStreet" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Street  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingCity" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing City  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingState" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing State/Province  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingPostalCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Zip/Postal Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingCountry" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Country  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingStateCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing State/Province Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+<xsd:enumeration value="AC"/>
+<xsd:enumeration value="AG"/>
+<xsd:enumeration value="AG"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="AK"/>
+<xsd:enumeration value="01"/>
+<xsd:enumeration value="02"/>
+<xsd:enumeration value="AB"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="03"/>
+<xsd:enumeration value="04"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AM"/>
+<xsd:enumeration value="AN"/>
+<xsd:enumeration value="AN"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AD"/>
+<xsd:enumeration value="34"/>
+<xsd:enumeration value="AO"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AZ"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AS"/>
+<xsd:enumeration value="AT"/>
+<xsd:enumeration value="33"/>
+<xsd:enumeration value="AUK"/>
+<xsd:enumeration value="ACT"/>
+<xsd:enumeration value="AV"/>
+<xsd:enumeration value="05"/>
+<xsd:enumeration value="06"/>
+<xsd:enumeration value="BA"/>
+<xsd:enumeration value="BC"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="07"/>
+<xsd:enumeration value="08"/>
+<xsd:enumeration value="BA"/>
+<xsd:enumeration value="BT"/>
+<xsd:enumeration value="BOP"/>
+<xsd:enumeration value="11"/>
+<xsd:enumeration value="BL"/>
+<xsd:enumeration value="BN"/>
+<xsd:enumeration value="BG"/>
+<xsd:enumeration value="BI"/>
+<xsd:enumeration value="BR"/>
+<xsd:enumeration value="BO"/>
+<xsd:enumeration value="BZ"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="BR"/>
+<xsd:enumeration value="BC"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="09"/>
+<xsd:enumeration value="10"/>
+<xsd:enumeration value="11"/>
+<xsd:enumeration value="CA"/>
+<xsd:enumeration value="CA"/>
+<xsd:enumeration value="CL"/>
+<xsd:enumeration value="CM"/>
+<xsd:enumeration value="CB"/>
+<xsd:enumeration value="39"/>
+<xsd:enumeration value="CAN"/>
+<xsd:enumeration value="CI"/>
+<xsd:enumeration value="CW"/>
+<xsd:enumeration value="CE"/>
+<xsd:enumeration value="12"/>
+<xsd:enumeration value="CT"/>
+<xsd:enumeration value="CZ"/>
+<xsd:enumeration value="CN"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="CE"/>
+<xsd:enumeration value="51"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="96"/>
+<xsd:enumeration value="CT"/>
+<xsd:enumeration value="CS"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="71"/>
+<xsd:enumeration value="50"/>
+<xsd:enumeration value="13"/>
+<xsd:enumeration value="CE"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="CL"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="CT"/>
+<xsd:enumeration value="14"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="15"/>
+<xsd:enumeration value="CS"/>
+<xsd:enumeration value="CR"/>
+<xsd:enumeration value="KR"/>
+<xsd:enumeration value="16"/>
+<xsd:enumeration value="CN"/>
+<xsd:enumeration value="DN"/>
+<xsd:enumeration value="DD"/>
+<xsd:enumeration value="DE"/>
+<xsd:enumeration value="DL"/>
+<xsd:enumeration value="DC"/>
+<xsd:enumeration value="DF"/>
+<xsd:enumeration value="DL"/>
+<xsd:enumeration value="D"/>
+<xsd:enumeration value="DG"/>
+<xsd:enumeration value="EN"/>
+<xsd:enumeration value="ES"/>
+<xsd:enumeration value="DF"/>
+<xsd:enumeration value="FM"/>
+<xsd:enumeration value="FE"/>
+<xsd:enumeration value="FI"/>
+<xsd:enumeration value="FL"/>
+<xsd:enumeration value="FG"/>
+<xsd:enumeration value="FC"/>
+<xsd:enumeration value="FR"/>
+<xsd:enumeration value="35"/>
+<xsd:enumeration value="G"/>
+<xsd:enumeration value="62"/>
+<xsd:enumeration value="GE"/>
+<xsd:enumeration value="GA"/>
+<xsd:enumeration value="17"/>
+<xsd:enumeration value="GIS"/>
+<xsd:enumeration value="GA"/>
+<xsd:enumeration value="GO"/>
+<xsd:enumeration value="GO"/>
+<xsd:enumeration value="18"/>
+<xsd:enumeration value="GR"/>
+<xsd:enumeration value="19"/>
+<xsd:enumeration value="GT"/>
+<xsd:enumeration value="44"/>
+<xsd:enumeration value="45"/>
+<xsd:enumeration value="97"/>
+<xsd:enumeration value="GR"/>
+<xsd:enumeration value="20"/>
+<xsd:enumeration value="52"/>
+<xsd:enumeration value="GJ"/>
+<xsd:enumeration value="46"/>
+<xsd:enumeration value="HR"/>
+<xsd:enumeration value="HI"/>
+<xsd:enumeration value="HKB"/>
+<xsd:enumeration value="13"/>
+<xsd:enumeration value="23"/>
+<xsd:enumeration value="41"/>
+<xsd:enumeration value="HG"/>
+<xsd:enumeration value="HP"/>
+<xsd:enumeration value="91"/>
+<xsd:enumeration value="42"/>
+<xsd:enumeration value="21"/>
+<xsd:enumeration value="22"/>
+<xsd:enumeration value="43"/>
+<xsd:enumeration value="ID"/>
+<xsd:enumeration value="IL"/>
+<xsd:enumeration value="IM"/>
+<xsd:enumeration value="IN"/>
+<xsd:enumeration value="93"/>
+<xsd:enumeration value="IA"/>
+<xsd:enumeration value="IS"/>
+<xsd:enumeration value="23"/>
+<xsd:enumeration value="JA"/>
+<xsd:enumeration value="JK"/>
+<xsd:enumeration value="JH"/>
+<xsd:enumeration value="32"/>
+<xsd:enumeration value="36"/>
+<xsd:enumeration value="22"/>
+<xsd:enumeration value="KS"/>
+<xsd:enumeration value="KA"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="KL"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="KE"/>
+<xsd:enumeration value="KK"/>
+<xsd:enumeration value="AQ"/>
+<xsd:enumeration value="LD"/>
+<xsd:enumeration value="LS"/>
+<xsd:enumeration value="26"/>
+<xsd:enumeration value="35"/>
+<xsd:enumeration value="SP"/>
+<xsd:enumeration value="LT"/>
+<xsd:enumeration value="LE"/>
+<xsd:enumeration value="LC"/>
+<xsd:enumeration value="LM"/>
+<xsd:enumeration value="24"/>
+<xsd:enumeration value="21"/>
+<xsd:enumeration value="LK"/>
+<xsd:enumeration value="LI"/>
+<xsd:enumeration value="25"/>
+<xsd:enumeration value="LO"/>
+<xsd:enumeration value="LD"/>
+<xsd:enumeration value="LA"/>
+<xsd:enumeration value="LH"/>
+<xsd:enumeration value="LU"/>
+<xsd:enumeration value="27"/>
+<xsd:enumeration value="92"/>
+<xsd:enumeration value="MC"/>
+<xsd:enumeration value="MP"/>
+<xsd:enumeration value="28"/>
+<xsd:enumeration value="MH"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="29"/>
+<xsd:enumeration value="MWT"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MB"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MA"/>
+<xsd:enumeration value="MBH"/>
+<xsd:enumeration value="MD"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MA"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MH"/>
+<xsd:enumeration value="VS"/>
+<xsd:enumeration value="ML"/>
+<xsd:enumeration value="52"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="MI"/>
+<xsd:enumeration value="MI"/>
+<xsd:enumeration value="MI"/>
+<xsd:enumeration value="MG"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MZ"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MB"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="30"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="NA"/>
+<xsd:enumeration value="31"/>
+<xsd:enumeration value="NA"/>
+<xsd:enumeration value="NE"/>
+<xsd:enumeration value="15"/>
+<xsd:enumeration value="NSN"/>
+<xsd:enumeration value="NV"/>
+<xsd:enumeration value="NB"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="NH"/>
+<xsd:enumeration value="NJ"/>
+<xsd:enumeration value="NM"/>
+<xsd:enumeration value="NSW"/>
+<xsd:enumeration value="NY"/>
+<xsd:enumeration value="64"/>
+<xsd:enumeration value="NC"/>
+<xsd:enumeration value="ND"/>
+<xsd:enumeration value="NT"/>
+<xsd:enumeration value="NTL"/>
+<xsd:enumeration value="NT"/>
+<xsd:enumeration value="NO"/>
+<xsd:enumeration value="NS"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="NU"/>
+<xsd:enumeration value="NU"/>
+<xsd:enumeration value="OA"/>
+<xsd:enumeration value="OR"/>
+<xsd:enumeration value="OY"/>
+<xsd:enumeration value="OG"/>
+<xsd:enumeration value="OH"/>
+<xsd:enumeration value="OK"/>
+<xsd:enumeration value="OT"/>
+<xsd:enumeration value="ON"/>
+<xsd:enumeration value="OR"/>
+<xsd:enumeration value="OR"/>
+<xsd:enumeration value="OTA"/>
+<xsd:enumeration value="32"/>
+<xsd:enumeration value="PD"/>
+<xsd:enumeration value="34"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PB"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PV"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PG"/>
+<xsd:enumeration value="PU"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PC"/>
+<xsd:enumeration value="PI"/>
+<xsd:enumeration value="PI"/>
+<xsd:enumeration value="PT"/>
+<xsd:enumeration value="36"/>
+<xsd:enumeration value="PN"/>
+<xsd:enumeration value="PZ"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PO"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PY"/>
+<xsd:enumeration value="PB"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PB"/>
+<xsd:enumeration value="99"/>
+<xsd:enumeration value="63"/>
+<xsd:enumeration value="QC"/>
+<xsd:enumeration value="QLD"/>
+<xsd:enumeration value="QE"/>
+<xsd:enumeration value="QR"/>
+<xsd:enumeration value="RG"/>
+<xsd:enumeration value="RJ"/>
+<xsd:enumeration value="RA"/>
+<xsd:enumeration value="RC"/>
+<xsd:enumeration value="RE"/>
+<xsd:enumeration value="RI"/>
+<xsd:enumeration value="RI"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RJ"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RS"/>
+<xsd:enumeration value="RM"/>
+<xsd:enumeration value="RO"/>
+<xsd:enumeration value="RR"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RO"/>
+<xsd:enumeration value="38"/>
+<xsd:enumeration value="37"/>
+<xsd:enumeration value="SA"/>
+<xsd:enumeration value="SL"/>
+<xsd:enumeration value="SC"/>
+<xsd:enumeration value="SP"/>
+<xsd:enumeration value="SK"/>
+<xsd:enumeration value="SS"/>
+<xsd:enumeration value="SV"/>
+<xsd:enumeration value="40"/>
+<xsd:enumeration value="SE"/>
+<xsd:enumeration value="41"/>
+<xsd:enumeration value="61"/>
+<xsd:enumeration value="37"/>
+<xsd:enumeration value="31"/>
+<xsd:enumeration value="95"/>
+<xsd:enumeration value="14"/>
+<xsd:enumeration value="98"/>
+<xsd:enumeration value="51"/>
+<xsd:enumeration value="SI"/>
+<xsd:enumeration value="SK"/>
+<xsd:enumeration value="SI"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="42"/>
+<xsd:enumeration value="SA"/>
+<xsd:enumeration value="SC"/>
+<xsd:enumeration value="SD"/>
+<xsd:enumeration value="STL"/>
+<xsd:enumeration value="SR"/>
+<xsd:enumeration value="TB"/>
+<xsd:enumeration value="94"/>
+<xsd:enumeration value="TM"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TKI"/>
+<xsd:enumeration value="TA"/>
+<xsd:enumeration value="43"/>
+<xsd:enumeration value="TAS"/>
+<xsd:enumeration value="TAS"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TE"/>
+<xsd:enumeration value="TR"/>
+<xsd:enumeration value="44"/>
+<xsd:enumeration value="TX"/>
+<xsd:enumeration value="12"/>
+<xsd:enumeration value="TA"/>
+<xsd:enumeration value="TL"/>
+<xsd:enumeration value="TO"/>
+<xsd:enumeration value="45"/>
+<xsd:enumeration value="TP"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TV"/>
+<xsd:enumeration value="TS"/>
+<xsd:enumeration value="TT"/>
+<xsd:enumeration value="TR"/>
+<xsd:enumeration value="TO"/>
+<xsd:enumeration value="UD"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="UT"/>
+<xsd:enumeration value="UT"/>
+<xsd:enumeration value="UP"/>
+<xsd:enumeration value="46"/>
+<xsd:enumeration value="47"/>
+<xsd:enumeration value="VA"/>
+<xsd:enumeration value="VE"/>
+<xsd:enumeration value="VE"/>
+<xsd:enumeration value="VB"/>
+<xsd:enumeration value="VC"/>
+<xsd:enumeration value="VT"/>
+<xsd:enumeration value="VR"/>
+<xsd:enumeration value="VV"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="VIC"/>
+<xsd:enumeration value="VA"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="VT"/>
+<xsd:enumeration value="48"/>
+<xsd:enumeration value="WKO"/>
+<xsd:enumeration value="WA"/>
+<xsd:enumeration value="WD"/>
+<xsd:enumeration value="WGN"/>
+<xsd:enumeration value="WB"/>
+<xsd:enumeration value="WTC"/>
+<xsd:enumeration value="WA"/>
+<xsd:enumeration value="WH"/>
+<xsd:enumeration value="WV"/>
+<xsd:enumeration value="WX"/>
+<xsd:enumeration value="WW"/>
+<xsd:enumeration value="WI"/>
+<xsd:enumeration value="WY"/>
+<xsd:enumeration value="65"/>
+<xsd:enumeration value="54"/>
+<xsd:enumeration value="YU"/>
+<xsd:enumeration value="YT"/>
+<xsd:enumeration value="53"/>
+<xsd:enumeration value="ZA"/>
+<xsd:enumeration value="49"/>
+<xsd:enumeration value="50"/>
+<xsd:enumeration value="33"/>
+<xsd:enumeration value="ZZ"/>
+<xsd:enumeration value="21"/>
+<xsd:enumeration value="26"/>
+<xsd:enumeration value="41"/>
+<xsd:enumeration value="28"/>
+<xsd:enumeration value="01"/>
+<xsd:enumeration value="12"/>
+<xsd:enumeration value="30"/>
+<xsd:enumeration value="11"/>
+<xsd:enumeration value="44"/>
+<xsd:enumeration value="27"/>
+<xsd:enumeration value="29"/>
+<xsd:enumeration value="04"/>
+<xsd:enumeration value="45"/>
+<xsd:enumeration value="22"/>
+<xsd:enumeration value="35"/>
+<xsd:enumeration value="06"/>
+<xsd:enumeration value="15"/>
+<xsd:enumeration value="20"/>
+<xsd:enumeration value="33"/>
+<xsd:enumeration value="03"/>
+<xsd:enumeration value="32"/>
+<xsd:enumeration value="34"/>
+<xsd:enumeration value="36"/>
+<xsd:enumeration value="38"/>
+<xsd:enumeration value="19"/>
+<xsd:enumeration value="17"/>
+<xsd:enumeration value="13"/>
+<xsd:enumeration value="09"/>
+<xsd:enumeration value="47"/>
+<xsd:enumeration value="25"/>
+<xsd:enumeration value="43"/>
+<xsd:enumeration value="23"/>
+<xsd:enumeration value="14"/>
+<xsd:enumeration value="24"/>
+<xsd:enumeration value="40"/>
+<xsd:enumeration value="07"/>
+<xsd:enumeration value="05"/>
+<xsd:enumeration value="10"/>
+<xsd:enumeration value="08"/>
+<xsd:enumeration value="42"/>
+<xsd:enumeration value="16"/>
+<xsd:enumeration value="02"/>
+<xsd:enumeration value="18"/>
+<xsd:enumeration value="37"/>
+<xsd:enumeration value="39"/>
+<xsd:enumeration value="31"/>
+<xsd:enumeration value="46"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingCountryCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Country Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+<xsd:enumeration value="AF"/>
+<xsd:enumeration value="AX"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="DZ"/>
+<xsd:enumeration value="AD"/>
+<xsd:enumeration value="AO"/>
+<xsd:enumeration value="AI"/>
+<xsd:enumeration value="AQ"/>
+<xsd:enumeration value="AG"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AM"/>
+<xsd:enumeration value="AW"/>
+<xsd:enumeration value="AU"/>
+<xsd:enumeration value="AT"/>
+<xsd:enumeration value="AZ"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="BH"/>
+<xsd:enumeration value="BD"/>
+<xsd:enumeration value="BB"/>
+<xsd:enumeration value="BY"/>
+<xsd:enumeration value="BE"/>
+<xsd:enumeration value="BZ"/>
+<xsd:enumeration value="BJ"/>
+<xsd:enumeration value="BM"/>
+<xsd:enumeration value="BT"/>
+<xsd:enumeration value="BO"/>
+<xsd:enumeration value="BQ"/>
+<xsd:enumeration value="BA"/>
+<xsd:enumeration value="BW"/>
+<xsd:enumeration value="BV"/>
+<xsd:enumeration value="BR"/>
+<xsd:enumeration value="IO"/>
+<xsd:enumeration value="BN"/>
+<xsd:enumeration value="BG"/>
+<xsd:enumeration value="BF"/>
+<xsd:enumeration value="BI"/>
+<xsd:enumeration value="KH"/>
+<xsd:enumeration value="CM"/>
+<xsd:enumeration value="CA"/>
+<xsd:enumeration value="CV"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="CF"/>
+<xsd:enumeration value="TD"/>
+<xsd:enumeration value="CL"/>
+<xsd:enumeration value="CN"/>
+<xsd:enumeration value="CX"/>
+<xsd:enumeration value="CC"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="KM"/>
+<xsd:enumeration value="CG"/>
+<xsd:enumeration value="CD"/>
+<xsd:enumeration value="CK"/>
+<xsd:enumeration value="CR"/>
+<xsd:enumeration value="CI"/>
+<xsd:enumeration value="HR"/>
+<xsd:enumeration value="CU"/>
+<xsd:enumeration value="CW"/>
+<xsd:enumeration value="CY"/>
+<xsd:enumeration value="CZ"/>
+<xsd:enumeration value="DK"/>
+<xsd:enumeration value="DJ"/>
+<xsd:enumeration value="DM"/>
+<xsd:enumeration value="DO"/>
+<xsd:enumeration value="EC"/>
+<xsd:enumeration value="EG"/>
+<xsd:enumeration value="SV"/>
+<xsd:enumeration value="GQ"/>
+<xsd:enumeration value="ER"/>
+<xsd:enumeration value="EE"/>
+<xsd:enumeration value="ET"/>
+<xsd:enumeration value="FK"/>
+<xsd:enumeration value="FO"/>
+<xsd:enumeration value="FJ"/>
+<xsd:enumeration value="FI"/>
+<xsd:enumeration value="FR"/>
+<xsd:enumeration value="GF"/>
+<xsd:enumeration value="PF"/>
+<xsd:enumeration value="TF"/>
+<xsd:enumeration value="GA"/>
+<xsd:enumeration value="GM"/>
+<xsd:enumeration value="GE"/>
+<xsd:enumeration value="DE"/>
+<xsd:enumeration value="GH"/>
+<xsd:enumeration value="GI"/>
+<xsd:enumeration value="GR"/>
+<xsd:enumeration value="GL"/>
+<xsd:enumeration value="GD"/>
+<xsd:enumeration value="GP"/>
+<xsd:enumeration value="GT"/>
+<xsd:enumeration value="GG"/>
+<xsd:enumeration value="GN"/>
+<xsd:enumeration value="GW"/>
+<xsd:enumeration value="GY"/>
+<xsd:enumeration value="HT"/>
+<xsd:enumeration value="HM"/>
+<xsd:enumeration value="VA"/>
+<xsd:enumeration value="HN"/>
+<xsd:enumeration value="HK"/>
+<xsd:enumeration value="HU"/>
+<xsd:enumeration value="IS"/>
+<xsd:enumeration value="IN"/>
+<xsd:enumeration value="ID"/>
+<xsd:enumeration value="IR"/>
+<xsd:enumeration value="IQ"/>
+<xsd:enumeration value="IE"/>
+<xsd:enumeration value="IM"/>
+<xsd:enumeration value="IL"/>
+<xsd:enumeration value="IT"/>
+<xsd:enumeration value="JM"/>
+<xsd:enumeration value="JP"/>
+<xsd:enumeration value="JE"/>
+<xsd:enumeration value="JO"/>
+<xsd:enumeration value="KZ"/>
+<xsd:enumeration value="KE"/>
+<xsd:enumeration value="KI"/>
+<xsd:enumeration value="XK"/>
+<xsd:enumeration value="KW"/>
+<xsd:enumeration value="KG"/>
+<xsd:enumeration value="LA"/>
+<xsd:enumeration value="LV"/>
+<xsd:enumeration value="LB"/>
+<xsd:enumeration value="LS"/>
+<xsd:enumeration value="LR"/>
+<xsd:enumeration value="LY"/>
+<xsd:enumeration value="LI"/>
+<xsd:enumeration value="LT"/>
+<xsd:enumeration value="LU"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MK"/>
+<xsd:enumeration value="MG"/>
+<xsd:enumeration value="MW"/>
+<xsd:enumeration value="MY"/>
+<xsd:enumeration value="MV"/>
+<xsd:enumeration value="ML"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MQ"/>
+<xsd:enumeration value="MR"/>
+<xsd:enumeration value="MU"/>
+<xsd:enumeration value="YT"/>
+<xsd:enumeration value="MX"/>
+<xsd:enumeration value="MD"/>
+<xsd:enumeration value="MC"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MA"/>
+<xsd:enumeration value="MZ"/>
+<xsd:enumeration value="MM"/>
+<xsd:enumeration value="NA"/>
+<xsd:enumeration value="NR"/>
+<xsd:enumeration value="NP"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="AN"/>
+<xsd:enumeration value="NC"/>
+<xsd:enumeration value="NZ"/>
+<xsd:enumeration value="NI"/>
+<xsd:enumeration value="NE"/>
+<xsd:enumeration value="NG"/>
+<xsd:enumeration value="NU"/>
+<xsd:enumeration value="NF"/>
+<xsd:enumeration value="MP"/>
+<xsd:enumeration value="KP"/>
+<xsd:enumeration value="NO"/>
+<xsd:enumeration value="OM"/>
+<xsd:enumeration value="PK"/>
+<xsd:enumeration value="PS"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PG"/>
+<xsd:enumeration value="PY"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PH"/>
+<xsd:enumeration value="PN"/>
+<xsd:enumeration value="PL"/>
+<xsd:enumeration value="PT"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="QA"/>
+<xsd:enumeration value="RE"/>
+<xsd:enumeration value="RO"/>
+<xsd:enumeration value="RU"/>
+<xsd:enumeration value="RW"/>
+<xsd:enumeration value="BL"/>
+<xsd:enumeration value="SH"/>
+<xsd:enumeration value="KN"/>
+<xsd:enumeration value="LC"/>
+<xsd:enumeration value="MF"/>
+<xsd:enumeration value="PM"/>
+<xsd:enumeration value="VC"/>
+<xsd:enumeration value="WS"/>
+<xsd:enumeration value="SM"/>
+<xsd:enumeration value="ST"/>
+<xsd:enumeration value="SA"/>
+<xsd:enumeration value="SN"/>
+<xsd:enumeration value="RS"/>
+<xsd:enumeration value="SC"/>
+<xsd:enumeration value="SL"/>
+<xsd:enumeration value="SG"/>
+<xsd:enumeration value="SX"/>
+<xsd:enumeration value="SK"/>
+<xsd:enumeration value="SI"/>
+<xsd:enumeration value="SB"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="ZA"/>
+<xsd:enumeration value="GS"/>
+<xsd:enumeration value="KR"/>
+<xsd:enumeration value="SS"/>
+<xsd:enumeration value="ES"/>
+<xsd:enumeration value="LK"/>
+<xsd:enumeration value="SD"/>
+<xsd:enumeration value="SR"/>
+<xsd:enumeration value="SJ"/>
+<xsd:enumeration value="SZ"/>
+<xsd:enumeration value="SE"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="SY"/>
+<xsd:enumeration value="TW"/>
+<xsd:enumeration value="TJ"/>
+<xsd:enumeration value="TZ"/>
+<xsd:enumeration value="TH"/>
+<xsd:enumeration value="TL"/>
+<xsd:enumeration value="TG"/>
+<xsd:enumeration value="TK"/>
+<xsd:enumeration value="TO"/>
+<xsd:enumeration value="TT"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TR"/>
+<xsd:enumeration value="TM"/>
+<xsd:enumeration value="TC"/>
+<xsd:enumeration value="TV"/>
+<xsd:enumeration value="UG"/>
+<xsd:enumeration value="UA"/>
+<xsd:enumeration value="AE"/>
+<xsd:enumeration value="GB"/>
+<xsd:enumeration value="US"/>
+<xsd:enumeration value="UY"/>
+<xsd:enumeration value="UM"/>
+<xsd:enumeration value="UZ"/>
+<xsd:enumeration value="VU"/>
+<xsd:enumeration value="VE"/>
+<xsd:enumeration value="VN"/>
+<xsd:enumeration value="VG"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="WF"/>
+<xsd:enumeration value="EH"/>
+<xsd:enumeration value="YE"/>
+<xsd:enumeration value="ZM"/>
+<xsd:enumeration value="ZW"/>
+<xsd:enumeration value="ZZ"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingLatitude" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Latitude  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="15"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BillingLongitude" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Longitude  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="15"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingStreet" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Street  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingCity" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping City  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingState" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping State/Province  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingPostalCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Zip/Postal Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingCountry" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Country  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingStateCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping State/Province Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+<xsd:enumeration value="AC"/>
+<xsd:enumeration value="AG"/>
+<xsd:enumeration value="AG"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="AK"/>
+<xsd:enumeration value="01"/>
+<xsd:enumeration value="02"/>
+<xsd:enumeration value="AB"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="03"/>
+<xsd:enumeration value="04"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AM"/>
+<xsd:enumeration value="AN"/>
+<xsd:enumeration value="AN"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AD"/>
+<xsd:enumeration value="34"/>
+<xsd:enumeration value="AO"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AZ"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AP"/>
+<xsd:enumeration value="AS"/>
+<xsd:enumeration value="AT"/>
+<xsd:enumeration value="33"/>
+<xsd:enumeration value="AUK"/>
+<xsd:enumeration value="ACT"/>
+<xsd:enumeration value="AV"/>
+<xsd:enumeration value="05"/>
+<xsd:enumeration value="06"/>
+<xsd:enumeration value="BA"/>
+<xsd:enumeration value="BC"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="07"/>
+<xsd:enumeration value="08"/>
+<xsd:enumeration value="BA"/>
+<xsd:enumeration value="BT"/>
+<xsd:enumeration value="BOP"/>
+<xsd:enumeration value="11"/>
+<xsd:enumeration value="BL"/>
+<xsd:enumeration value="BN"/>
+<xsd:enumeration value="BG"/>
+<xsd:enumeration value="BI"/>
+<xsd:enumeration value="BR"/>
+<xsd:enumeration value="BO"/>
+<xsd:enumeration value="BZ"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="BR"/>
+<xsd:enumeration value="BC"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="09"/>
+<xsd:enumeration value="10"/>
+<xsd:enumeration value="11"/>
+<xsd:enumeration value="CA"/>
+<xsd:enumeration value="CA"/>
+<xsd:enumeration value="CL"/>
+<xsd:enumeration value="CM"/>
+<xsd:enumeration value="CB"/>
+<xsd:enumeration value="39"/>
+<xsd:enumeration value="CAN"/>
+<xsd:enumeration value="CI"/>
+<xsd:enumeration value="CW"/>
+<xsd:enumeration value="CE"/>
+<xsd:enumeration value="12"/>
+<xsd:enumeration value="CT"/>
+<xsd:enumeration value="CZ"/>
+<xsd:enumeration value="CN"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="CE"/>
+<xsd:enumeration value="51"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="96"/>
+<xsd:enumeration value="CT"/>
+<xsd:enumeration value="CS"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="71"/>
+<xsd:enumeration value="50"/>
+<xsd:enumeration value="13"/>
+<xsd:enumeration value="CE"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="CL"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="CT"/>
+<xsd:enumeration value="14"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="15"/>
+<xsd:enumeration value="CS"/>
+<xsd:enumeration value="CR"/>
+<xsd:enumeration value="KR"/>
+<xsd:enumeration value="16"/>
+<xsd:enumeration value="CN"/>
+<xsd:enumeration value="DN"/>
+<xsd:enumeration value="DD"/>
+<xsd:enumeration value="DE"/>
+<xsd:enumeration value="DL"/>
+<xsd:enumeration value="DC"/>
+<xsd:enumeration value="DF"/>
+<xsd:enumeration value="DL"/>
+<xsd:enumeration value="D"/>
+<xsd:enumeration value="DG"/>
+<xsd:enumeration value="EN"/>
+<xsd:enumeration value="ES"/>
+<xsd:enumeration value="DF"/>
+<xsd:enumeration value="FM"/>
+<xsd:enumeration value="FE"/>
+<xsd:enumeration value="FI"/>
+<xsd:enumeration value="FL"/>
+<xsd:enumeration value="FG"/>
+<xsd:enumeration value="FC"/>
+<xsd:enumeration value="FR"/>
+<xsd:enumeration value="35"/>
+<xsd:enumeration value="G"/>
+<xsd:enumeration value="62"/>
+<xsd:enumeration value="GE"/>
+<xsd:enumeration value="GA"/>
+<xsd:enumeration value="17"/>
+<xsd:enumeration value="GIS"/>
+<xsd:enumeration value="GA"/>
+<xsd:enumeration value="GO"/>
+<xsd:enumeration value="GO"/>
+<xsd:enumeration value="18"/>
+<xsd:enumeration value="GR"/>
+<xsd:enumeration value="19"/>
+<xsd:enumeration value="GT"/>
+<xsd:enumeration value="44"/>
+<xsd:enumeration value="45"/>
+<xsd:enumeration value="97"/>
+<xsd:enumeration value="GR"/>
+<xsd:enumeration value="20"/>
+<xsd:enumeration value="52"/>
+<xsd:enumeration value="GJ"/>
+<xsd:enumeration value="46"/>
+<xsd:enumeration value="HR"/>
+<xsd:enumeration value="HI"/>
+<xsd:enumeration value="HKB"/>
+<xsd:enumeration value="13"/>
+<xsd:enumeration value="23"/>
+<xsd:enumeration value="41"/>
+<xsd:enumeration value="HG"/>
+<xsd:enumeration value="HP"/>
+<xsd:enumeration value="91"/>
+<xsd:enumeration value="42"/>
+<xsd:enumeration value="21"/>
+<xsd:enumeration value="22"/>
+<xsd:enumeration value="43"/>
+<xsd:enumeration value="ID"/>
+<xsd:enumeration value="IL"/>
+<xsd:enumeration value="IM"/>
+<xsd:enumeration value="IN"/>
+<xsd:enumeration value="93"/>
+<xsd:enumeration value="IA"/>
+<xsd:enumeration value="IS"/>
+<xsd:enumeration value="23"/>
+<xsd:enumeration value="JA"/>
+<xsd:enumeration value="JK"/>
+<xsd:enumeration value="JH"/>
+<xsd:enumeration value="32"/>
+<xsd:enumeration value="36"/>
+<xsd:enumeration value="22"/>
+<xsd:enumeration value="KS"/>
+<xsd:enumeration value="KA"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="KL"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="KE"/>
+<xsd:enumeration value="KK"/>
+<xsd:enumeration value="AQ"/>
+<xsd:enumeration value="LD"/>
+<xsd:enumeration value="LS"/>
+<xsd:enumeration value="26"/>
+<xsd:enumeration value="35"/>
+<xsd:enumeration value="SP"/>
+<xsd:enumeration value="LT"/>
+<xsd:enumeration value="LE"/>
+<xsd:enumeration value="LC"/>
+<xsd:enumeration value="LM"/>
+<xsd:enumeration value="24"/>
+<xsd:enumeration value="21"/>
+<xsd:enumeration value="LK"/>
+<xsd:enumeration value="LI"/>
+<xsd:enumeration value="25"/>
+<xsd:enumeration value="LO"/>
+<xsd:enumeration value="LD"/>
+<xsd:enumeration value="LA"/>
+<xsd:enumeration value="LH"/>
+<xsd:enumeration value="LU"/>
+<xsd:enumeration value="27"/>
+<xsd:enumeration value="92"/>
+<xsd:enumeration value="MC"/>
+<xsd:enumeration value="MP"/>
+<xsd:enumeration value="28"/>
+<xsd:enumeration value="MH"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="29"/>
+<xsd:enumeration value="MWT"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MB"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MA"/>
+<xsd:enumeration value="MBH"/>
+<xsd:enumeration value="MD"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MA"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MH"/>
+<xsd:enumeration value="VS"/>
+<xsd:enumeration value="ML"/>
+<xsd:enumeration value="52"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="MI"/>
+<xsd:enumeration value="MI"/>
+<xsd:enumeration value="MI"/>
+<xsd:enumeration value="MG"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MZ"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MB"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="30"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="NA"/>
+<xsd:enumeration value="31"/>
+<xsd:enumeration value="NA"/>
+<xsd:enumeration value="NE"/>
+<xsd:enumeration value="15"/>
+<xsd:enumeration value="NSN"/>
+<xsd:enumeration value="NV"/>
+<xsd:enumeration value="NB"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="NH"/>
+<xsd:enumeration value="NJ"/>
+<xsd:enumeration value="NM"/>
+<xsd:enumeration value="NSW"/>
+<xsd:enumeration value="NY"/>
+<xsd:enumeration value="64"/>
+<xsd:enumeration value="NC"/>
+<xsd:enumeration value="ND"/>
+<xsd:enumeration value="NT"/>
+<xsd:enumeration value="NTL"/>
+<xsd:enumeration value="NT"/>
+<xsd:enumeration value="NO"/>
+<xsd:enumeration value="NS"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="NU"/>
+<xsd:enumeration value="NU"/>
+<xsd:enumeration value="OA"/>
+<xsd:enumeration value="OR"/>
+<xsd:enumeration value="OY"/>
+<xsd:enumeration value="OG"/>
+<xsd:enumeration value="OH"/>
+<xsd:enumeration value="OK"/>
+<xsd:enumeration value="OT"/>
+<xsd:enumeration value="ON"/>
+<xsd:enumeration value="OR"/>
+<xsd:enumeration value="OR"/>
+<xsd:enumeration value="OTA"/>
+<xsd:enumeration value="32"/>
+<xsd:enumeration value="PD"/>
+<xsd:enumeration value="34"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PB"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PV"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PG"/>
+<xsd:enumeration value="PU"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PC"/>
+<xsd:enumeration value="PI"/>
+<xsd:enumeration value="PI"/>
+<xsd:enumeration value="PT"/>
+<xsd:enumeration value="36"/>
+<xsd:enumeration value="PN"/>
+<xsd:enumeration value="PZ"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PO"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PY"/>
+<xsd:enumeration value="PB"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="PB"/>
+<xsd:enumeration value="99"/>
+<xsd:enumeration value="63"/>
+<xsd:enumeration value="QC"/>
+<xsd:enumeration value="QLD"/>
+<xsd:enumeration value="QE"/>
+<xsd:enumeration value="QR"/>
+<xsd:enumeration value="RG"/>
+<xsd:enumeration value="RJ"/>
+<xsd:enumeration value="RA"/>
+<xsd:enumeration value="RC"/>
+<xsd:enumeration value="RE"/>
+<xsd:enumeration value="RI"/>
+<xsd:enumeration value="RI"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RJ"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RS"/>
+<xsd:enumeration value="RM"/>
+<xsd:enumeration value="RO"/>
+<xsd:enumeration value="RR"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RO"/>
+<xsd:enumeration value="38"/>
+<xsd:enumeration value="37"/>
+<xsd:enumeration value="SA"/>
+<xsd:enumeration value="SL"/>
+<xsd:enumeration value="SC"/>
+<xsd:enumeration value="SP"/>
+<xsd:enumeration value="SK"/>
+<xsd:enumeration value="SS"/>
+<xsd:enumeration value="SV"/>
+<xsd:enumeration value="40"/>
+<xsd:enumeration value="SE"/>
+<xsd:enumeration value="41"/>
+<xsd:enumeration value="61"/>
+<xsd:enumeration value="37"/>
+<xsd:enumeration value="31"/>
+<xsd:enumeration value="95"/>
+<xsd:enumeration value="14"/>
+<xsd:enumeration value="98"/>
+<xsd:enumeration value="51"/>
+<xsd:enumeration value="SI"/>
+<xsd:enumeration value="SK"/>
+<xsd:enumeration value="SI"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="42"/>
+<xsd:enumeration value="SA"/>
+<xsd:enumeration value="SC"/>
+<xsd:enumeration value="SD"/>
+<xsd:enumeration value="STL"/>
+<xsd:enumeration value="SR"/>
+<xsd:enumeration value="TB"/>
+<xsd:enumeration value="94"/>
+<xsd:enumeration value="TM"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TKI"/>
+<xsd:enumeration value="TA"/>
+<xsd:enumeration value="43"/>
+<xsd:enumeration value="TAS"/>
+<xsd:enumeration value="TAS"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TE"/>
+<xsd:enumeration value="TR"/>
+<xsd:enumeration value="44"/>
+<xsd:enumeration value="TX"/>
+<xsd:enumeration value="12"/>
+<xsd:enumeration value="TA"/>
+<xsd:enumeration value="TL"/>
+<xsd:enumeration value="TO"/>
+<xsd:enumeration value="45"/>
+<xsd:enumeration value="TP"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TV"/>
+<xsd:enumeration value="TS"/>
+<xsd:enumeration value="TT"/>
+<xsd:enumeration value="TR"/>
+<xsd:enumeration value="TO"/>
+<xsd:enumeration value="UD"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="UT"/>
+<xsd:enumeration value="UT"/>
+<xsd:enumeration value="UP"/>
+<xsd:enumeration value="46"/>
+<xsd:enumeration value="47"/>
+<xsd:enumeration value="VA"/>
+<xsd:enumeration value="VE"/>
+<xsd:enumeration value="VE"/>
+<xsd:enumeration value="VB"/>
+<xsd:enumeration value="VC"/>
+<xsd:enumeration value="VT"/>
+<xsd:enumeration value="VR"/>
+<xsd:enumeration value="VV"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="VIC"/>
+<xsd:enumeration value="VA"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="VT"/>
+<xsd:enumeration value="48"/>
+<xsd:enumeration value="WKO"/>
+<xsd:enumeration value="WA"/>
+<xsd:enumeration value="WD"/>
+<xsd:enumeration value="WGN"/>
+<xsd:enumeration value="WB"/>
+<xsd:enumeration value="WTC"/>
+<xsd:enumeration value="WA"/>
+<xsd:enumeration value="WH"/>
+<xsd:enumeration value="WV"/>
+<xsd:enumeration value="WX"/>
+<xsd:enumeration value="WW"/>
+<xsd:enumeration value="WI"/>
+<xsd:enumeration value="WY"/>
+<xsd:enumeration value="65"/>
+<xsd:enumeration value="54"/>
+<xsd:enumeration value="YU"/>
+<xsd:enumeration value="YT"/>
+<xsd:enumeration value="53"/>
+<xsd:enumeration value="ZA"/>
+<xsd:enumeration value="49"/>
+<xsd:enumeration value="50"/>
+<xsd:enumeration value="33"/>
+<xsd:enumeration value="ZZ"/>
+<xsd:enumeration value="21"/>
+<xsd:enumeration value="26"/>
+<xsd:enumeration value="41"/>
+<xsd:enumeration value="28"/>
+<xsd:enumeration value="01"/>
+<xsd:enumeration value="12"/>
+<xsd:enumeration value="30"/>
+<xsd:enumeration value="11"/>
+<xsd:enumeration value="44"/>
+<xsd:enumeration value="27"/>
+<xsd:enumeration value="29"/>
+<xsd:enumeration value="04"/>
+<xsd:enumeration value="45"/>
+<xsd:enumeration value="22"/>
+<xsd:enumeration value="35"/>
+<xsd:enumeration value="06"/>
+<xsd:enumeration value="15"/>
+<xsd:enumeration value="20"/>
+<xsd:enumeration value="33"/>
+<xsd:enumeration value="03"/>
+<xsd:enumeration value="32"/>
+<xsd:enumeration value="34"/>
+<xsd:enumeration value="36"/>
+<xsd:enumeration value="38"/>
+<xsd:enumeration value="19"/>
+<xsd:enumeration value="17"/>
+<xsd:enumeration value="13"/>
+<xsd:enumeration value="09"/>
+<xsd:enumeration value="47"/>
+<xsd:enumeration value="25"/>
+<xsd:enumeration value="43"/>
+<xsd:enumeration value="23"/>
+<xsd:enumeration value="14"/>
+<xsd:enumeration value="24"/>
+<xsd:enumeration value="40"/>
+<xsd:enumeration value="07"/>
+<xsd:enumeration value="05"/>
+<xsd:enumeration value="10"/>
+<xsd:enumeration value="08"/>
+<xsd:enumeration value="42"/>
+<xsd:enumeration value="16"/>
+<xsd:enumeration value="02"/>
+<xsd:enumeration value="18"/>
+<xsd:enumeration value="37"/>
+<xsd:enumeration value="39"/>
+<xsd:enumeration value="31"/>
+<xsd:enumeration value="46"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingCountryCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Country Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+<xsd:enumeration value="AF"/>
+<xsd:enumeration value="AX"/>
+<xsd:enumeration value="AL"/>
+<xsd:enumeration value="DZ"/>
+<xsd:enumeration value="AD"/>
+<xsd:enumeration value="AO"/>
+<xsd:enumeration value="AI"/>
+<xsd:enumeration value="AQ"/>
+<xsd:enumeration value="AG"/>
+<xsd:enumeration value="AR"/>
+<xsd:enumeration value="AM"/>
+<xsd:enumeration value="AW"/>
+<xsd:enumeration value="AU"/>
+<xsd:enumeration value="AT"/>
+<xsd:enumeration value="AZ"/>
+<xsd:enumeration value="BS"/>
+<xsd:enumeration value="BH"/>
+<xsd:enumeration value="BD"/>
+<xsd:enumeration value="BB"/>
+<xsd:enumeration value="BY"/>
+<xsd:enumeration value="BE"/>
+<xsd:enumeration value="BZ"/>
+<xsd:enumeration value="BJ"/>
+<xsd:enumeration value="BM"/>
+<xsd:enumeration value="BT"/>
+<xsd:enumeration value="BO"/>
+<xsd:enumeration value="BQ"/>
+<xsd:enumeration value="BA"/>
+<xsd:enumeration value="BW"/>
+<xsd:enumeration value="BV"/>
+<xsd:enumeration value="BR"/>
+<xsd:enumeration value="IO"/>
+<xsd:enumeration value="BN"/>
+<xsd:enumeration value="BG"/>
+<xsd:enumeration value="BF"/>
+<xsd:enumeration value="BI"/>
+<xsd:enumeration value="KH"/>
+<xsd:enumeration value="CM"/>
+<xsd:enumeration value="CA"/>
+<xsd:enumeration value="CV"/>
+<xsd:enumeration value="KY"/>
+<xsd:enumeration value="CF"/>
+<xsd:enumeration value="TD"/>
+<xsd:enumeration value="CL"/>
+<xsd:enumeration value="CN"/>
+<xsd:enumeration value="CX"/>
+<xsd:enumeration value="CC"/>
+<xsd:enumeration value="CO"/>
+<xsd:enumeration value="KM"/>
+<xsd:enumeration value="CG"/>
+<xsd:enumeration value="CD"/>
+<xsd:enumeration value="CK"/>
+<xsd:enumeration value="CR"/>
+<xsd:enumeration value="CI"/>
+<xsd:enumeration value="HR"/>
+<xsd:enumeration value="CU"/>
+<xsd:enumeration value="CW"/>
+<xsd:enumeration value="CY"/>
+<xsd:enumeration value="CZ"/>
+<xsd:enumeration value="DK"/>
+<xsd:enumeration value="DJ"/>
+<xsd:enumeration value="DM"/>
+<xsd:enumeration value="DO"/>
+<xsd:enumeration value="EC"/>
+<xsd:enumeration value="EG"/>
+<xsd:enumeration value="SV"/>
+<xsd:enumeration value="GQ"/>
+<xsd:enumeration value="ER"/>
+<xsd:enumeration value="EE"/>
+<xsd:enumeration value="ET"/>
+<xsd:enumeration value="FK"/>
+<xsd:enumeration value="FO"/>
+<xsd:enumeration value="FJ"/>
+<xsd:enumeration value="FI"/>
+<xsd:enumeration value="FR"/>
+<xsd:enumeration value="GF"/>
+<xsd:enumeration value="PF"/>
+<xsd:enumeration value="TF"/>
+<xsd:enumeration value="GA"/>
+<xsd:enumeration value="GM"/>
+<xsd:enumeration value="GE"/>
+<xsd:enumeration value="DE"/>
+<xsd:enumeration value="GH"/>
+<xsd:enumeration value="GI"/>
+<xsd:enumeration value="GR"/>
+<xsd:enumeration value="GL"/>
+<xsd:enumeration value="GD"/>
+<xsd:enumeration value="GP"/>
+<xsd:enumeration value="GT"/>
+<xsd:enumeration value="GG"/>
+<xsd:enumeration value="GN"/>
+<xsd:enumeration value="GW"/>
+<xsd:enumeration value="GY"/>
+<xsd:enumeration value="HT"/>
+<xsd:enumeration value="HM"/>
+<xsd:enumeration value="VA"/>
+<xsd:enumeration value="HN"/>
+<xsd:enumeration value="HK"/>
+<xsd:enumeration value="HU"/>
+<xsd:enumeration value="IS"/>
+<xsd:enumeration value="IN"/>
+<xsd:enumeration value="ID"/>
+<xsd:enumeration value="IR"/>
+<xsd:enumeration value="IQ"/>
+<xsd:enumeration value="IE"/>
+<xsd:enumeration value="IM"/>
+<xsd:enumeration value="IL"/>
+<xsd:enumeration value="IT"/>
+<xsd:enumeration value="JM"/>
+<xsd:enumeration value="JP"/>
+<xsd:enumeration value="JE"/>
+<xsd:enumeration value="JO"/>
+<xsd:enumeration value="KZ"/>
+<xsd:enumeration value="KE"/>
+<xsd:enumeration value="KI"/>
+<xsd:enumeration value="XK"/>
+<xsd:enumeration value="KW"/>
+<xsd:enumeration value="KG"/>
+<xsd:enumeration value="LA"/>
+<xsd:enumeration value="LV"/>
+<xsd:enumeration value="LB"/>
+<xsd:enumeration value="LS"/>
+<xsd:enumeration value="LR"/>
+<xsd:enumeration value="LY"/>
+<xsd:enumeration value="LI"/>
+<xsd:enumeration value="LT"/>
+<xsd:enumeration value="LU"/>
+<xsd:enumeration value="MO"/>
+<xsd:enumeration value="MK"/>
+<xsd:enumeration value="MG"/>
+<xsd:enumeration value="MW"/>
+<xsd:enumeration value="MY"/>
+<xsd:enumeration value="MV"/>
+<xsd:enumeration value="ML"/>
+<xsd:enumeration value="MT"/>
+<xsd:enumeration value="MQ"/>
+<xsd:enumeration value="MR"/>
+<xsd:enumeration value="MU"/>
+<xsd:enumeration value="YT"/>
+<xsd:enumeration value="MX"/>
+<xsd:enumeration value="MD"/>
+<xsd:enumeration value="MC"/>
+<xsd:enumeration value="MN"/>
+<xsd:enumeration value="ME"/>
+<xsd:enumeration value="MS"/>
+<xsd:enumeration value="MA"/>
+<xsd:enumeration value="MZ"/>
+<xsd:enumeration value="MM"/>
+<xsd:enumeration value="NA"/>
+<xsd:enumeration value="NR"/>
+<xsd:enumeration value="NP"/>
+<xsd:enumeration value="NL"/>
+<xsd:enumeration value="AN"/>
+<xsd:enumeration value="NC"/>
+<xsd:enumeration value="NZ"/>
+<xsd:enumeration value="NI"/>
+<xsd:enumeration value="NE"/>
+<xsd:enumeration value="NG"/>
+<xsd:enumeration value="NU"/>
+<xsd:enumeration value="NF"/>
+<xsd:enumeration value="MP"/>
+<xsd:enumeration value="KP"/>
+<xsd:enumeration value="NO"/>
+<xsd:enumeration value="OM"/>
+<xsd:enumeration value="PK"/>
+<xsd:enumeration value="PS"/>
+<xsd:enumeration value="PA"/>
+<xsd:enumeration value="PG"/>
+<xsd:enumeration value="PY"/>
+<xsd:enumeration value="PE"/>
+<xsd:enumeration value="PH"/>
+<xsd:enumeration value="PN"/>
+<xsd:enumeration value="PL"/>
+<xsd:enumeration value="PT"/>
+<xsd:enumeration value="PR"/>
+<xsd:enumeration value="QA"/>
+<xsd:enumeration value="RE"/>
+<xsd:enumeration value="RO"/>
+<xsd:enumeration value="RU"/>
+<xsd:enumeration value="RW"/>
+<xsd:enumeration value="BL"/>
+<xsd:enumeration value="SH"/>
+<xsd:enumeration value="KN"/>
+<xsd:enumeration value="LC"/>
+<xsd:enumeration value="MF"/>
+<xsd:enumeration value="PM"/>
+<xsd:enumeration value="VC"/>
+<xsd:enumeration value="WS"/>
+<xsd:enumeration value="SM"/>
+<xsd:enumeration value="ST"/>
+<xsd:enumeration value="SA"/>
+<xsd:enumeration value="SN"/>
+<xsd:enumeration value="RS"/>
+<xsd:enumeration value="SC"/>
+<xsd:enumeration value="SL"/>
+<xsd:enumeration value="SG"/>
+<xsd:enumeration value="SX"/>
+<xsd:enumeration value="SK"/>
+<xsd:enumeration value="SI"/>
+<xsd:enumeration value="SB"/>
+<xsd:enumeration value="SO"/>
+<xsd:enumeration value="ZA"/>
+<xsd:enumeration value="GS"/>
+<xsd:enumeration value="KR"/>
+<xsd:enumeration value="SS"/>
+<xsd:enumeration value="ES"/>
+<xsd:enumeration value="LK"/>
+<xsd:enumeration value="SD"/>
+<xsd:enumeration value="SR"/>
+<xsd:enumeration value="SJ"/>
+<xsd:enumeration value="SZ"/>
+<xsd:enumeration value="SE"/>
+<xsd:enumeration value="CH"/>
+<xsd:enumeration value="SY"/>
+<xsd:enumeration value="TW"/>
+<xsd:enumeration value="TJ"/>
+<xsd:enumeration value="TZ"/>
+<xsd:enumeration value="TH"/>
+<xsd:enumeration value="TL"/>
+<xsd:enumeration value="TG"/>
+<xsd:enumeration value="TK"/>
+<xsd:enumeration value="TO"/>
+<xsd:enumeration value="TT"/>
+<xsd:enumeration value="TN"/>
+<xsd:enumeration value="TR"/>
+<xsd:enumeration value="TM"/>
+<xsd:enumeration value="TC"/>
+<xsd:enumeration value="TV"/>
+<xsd:enumeration value="UG"/>
+<xsd:enumeration value="UA"/>
+<xsd:enumeration value="AE"/>
+<xsd:enumeration value="GB"/>
+<xsd:enumeration value="US"/>
+<xsd:enumeration value="UY"/>
+<xsd:enumeration value="UM"/>
+<xsd:enumeration value="UZ"/>
+<xsd:enumeration value="VU"/>
+<xsd:enumeration value="VE"/>
+<xsd:enumeration value="VN"/>
+<xsd:enumeration value="VG"/>
+<xsd:enumeration value="VI"/>
+<xsd:enumeration value="WF"/>
+<xsd:enumeration value="EH"/>
+<xsd:enumeration value="YE"/>
+<xsd:enumeration value="ZM"/>
+<xsd:enumeration value="ZW"/>
+<xsd:enumeration value="ZZ"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingLatitude" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Latitude  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="15"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ShippingLongitude" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Longitude  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="15"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Phone" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Phone  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Fax" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Fax  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AccountNumber" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Number - Syneron  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Website" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Website  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Sic" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>SIC Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Industry" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Industry  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+<xsd:enumeration value="Medical"/>
+<xsd:enumeration value="Dental"/>
+<xsd:enumeration value="Dental Spa"/>
+<xsd:enumeration value="MedSpa"/>
+<xsd:enumeration value="Spa Market"/>
+<xsd:enumeration value="Other"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AnnualRevenue" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Annual Revenue  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="NumberOfEmployees" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Employees  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:int">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Ownership" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ownership  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+<xsd:enumeration value="Public"/>
+<xsd:enumeration value="Private"/>
+<xsd:enumeration value="Subsidiary"/>
+<xsd:enumeration value="Other"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TickerSymbol" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ticker Symbol  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Description" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Description  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Rating" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Rating  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+<xsd:enumeration value="Cold"/>
+<xsd:enumeration value="Warm"/>
+<xsd:enumeration value="Hot"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Site" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Site  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CurrencyIsoCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Currency  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3"/>
+<xsd:enumeration value="AUD"/>
+<xsd:enumeration value="GBP"/>
+<xsd:enumeration value="CAD"/>
+<xsd:enumeration value="CNY"/>
+<xsd:enumeration value="EUR"/>
+<xsd:enumeration value="ILS"/>
+<xsd:enumeration value="JPY"/>
+<xsd:enumeration value="USD"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="OwnerId" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Owner ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CreatedDate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created Date  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CreatedById" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created By ID  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastModifiedDate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Modified Date  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastModifiedById" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Modified By ID  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SystemModstamp" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>System Modstamp  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastActivityDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Activity  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastViewedDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Viewed Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastReferencedDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Referenced Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="IsPartner" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Partner Account  Filterable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="IsCustomerPortal" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Customer Portal Account  Filterable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Jigsaw" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data.com Key  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="JigsawCompanyId" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Jigsaw Company ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AccountSource" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Source  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+<xsd:enumeration value="Advertisement"/>
+<xsd:enumeration value="Cold Call"/>
+<xsd:enumeration value="E-blast"/>
+<xsd:enumeration value="Inside Sales"/>
+<xsd:enumeration value="Outbound Call Center"/>
+<xsd:enumeration value="Partner"/>
+<xsd:enumeration value="Seminar"/>
+<xsd:enumeration value="Trade Show- National"/>
+<xsd:enumeration value="Trade Show- Regional"/>
+<xsd:enumeration value="Webcast Event"/>
+<xsd:enumeration value="Web Page Candela"/>
+<xsd:enumeration value="Web Page Syneron"/>
+<xsd:enumeration value="iPad"/>
+<xsd:enumeration value="National Laser Institute"/>
+<xsd:enumeration value="Internal Workshop"/>
+<xsd:enumeration value="External Workshop"/>
+<xsd:enumeration value="Sales Rep"/>
+<xsd:enumeration value="Purchased List"/>
+<xsd:enumeration value="Mailing Campaign"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SicDesc" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>SIC Description  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Satisfaction_Rating__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Satisfaction Rating  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Green"/>
+<xsd:enumeration value="Yellow"/>
+<xsd:enumeration value="Red"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LegalOperatingName__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Legal Operating Name  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="128"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Territory__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Region  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Canada"/>
+<xsd:enumeration value="Midwest"/>
+<xsd:enumeration value="Northeast"/>
+<xsd:enumeration value="Southeast"/>
+<xsd:enumeration value="West"/>
+<xsd:enumeration value="UK"/>
+<xsd:enumeration value="France"/>
+<xsd:enumeration value="Spain"/>
+<xsd:enumeration value="Germany"/>
+<xsd:enumeration value="Italy"/>
+<xsd:enumeration value="APAC"/>
+<xsd:enumeration value="LATAM"/>
+<xsd:enumeration value="Australia"/>
+<xsd:enumeration value="China"/>
+<xsd:enumeration value="International"/>
+<xsd:enumeration value="Israel"/>
+<xsd:enumeration value="Japan"/>
+<xsd:enumeration value="National"/>
+<xsd:enumeration value="Light"/>
+<xsd:enumeration value="East Europe"/>
+<xsd:enumeration value="West Europe"/>
+<xsd:enumeration value="Middle East"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Satisfaction__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Satisfaction  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Billing_Address_Map__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Map  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Shipping_Address_Map__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Map  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Office_Email__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Office Email  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Active"/>
+<xsd:enumeration value="Inactive"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Password__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Password  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="16"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="enhancePaymentDate__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Enhancement payment date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TempShippingCity__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>TempShippingCity  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="WebVelasmoothSponsor__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Web Velasmooth Sponsor  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="National_Account__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>National Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="ALC"/>
+<xsd:enumeration value="Ideal Image"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="In_Business_Since__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>In Business Since  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Speciality__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Speciality  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Anesthesiology"/>
+<xsd:enumeration value="ARNP’s"/>
+<xsd:enumeration value="Cardiovascular surgery"/>
+<xsd:enumeration value="Chiropractor"/>
+<xsd:enumeration value="Cosmetic Doctor"/>
+<xsd:enumeration value="Cosmetic Surgery"/>
+<xsd:enumeration value="Dentistry"/>
+<xsd:enumeration value="Dermatology"/>
+<xsd:enumeration value="EMPLOYEE"/>
+<xsd:enumeration value="ENT"/>
+<xsd:enumeration value="Esthetician"/>
+<xsd:enumeration value="Facial Plastic Surgery"/>
+<xsd:enumeration value="Former Employee"/>
+<xsd:enumeration value="General Surgery"/>
+<xsd:enumeration value="GP/FM/IM"/>
+<xsd:enumeration value="ILDistributor"/>
+<xsd:enumeration value="Internal Use Only"/>
+<xsd:enumeration value="LVN&apos;s"/>
+<xsd:enumeration value="Massage Therapy"/>
+<xsd:enumeration value="MedSpa"/>
+<xsd:enumeration value="Neurology"/>
+<xsd:enumeration value="OB/GYN"/>
+<xsd:enumeration value="Occuloplastic"/>
+<xsd:enumeration value="Oncology"/>
+<xsd:enumeration value="Ophthalmology"/>
+<xsd:enumeration value="Oral / Maxillofacial Surgery"/>
+<xsd:enumeration value="Orthopedic Surgery"/>
+<xsd:enumeration value="Otolaryngology"/>
+<xsd:enumeration value="Pediatrics"/>
+<xsd:enumeration value="Pediatry"/>
+<xsd:enumeration value="Phlebology"/>
+<xsd:enumeration value="Physical Medicine &amp; Rehabilitation"/>
+<xsd:enumeration value="Physician Assistant"/>
+<xsd:enumeration value="Plastic Surgery"/>
+<xsd:enumeration value="Radiology"/>
+<xsd:enumeration value="RN"/>
+<xsd:enumeration value="RN’s"/>
+<xsd:enumeration value="Tattoo Parlour"/>
+<xsd:enumeration value="Tattoo Removal"/>
+<xsd:enumeration value="Undefined"/>
+<xsd:enumeration value="Unknown"/>
+<xsd:enumeration value="Vascular Surgery"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Validated_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Validated Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Validated_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Validated By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="End_User_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>End User Number  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="WebRefirmeTestOptIn__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Web Refirme Test Opt In  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Biography__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Biography  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Hours__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Hours  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Offerings__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Offerings  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ForumId__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>ForumId  Filterable. Createable. Updateable. IdLookup. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Latitude__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Latitude  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="13"/>
+<xsd:fractionDigits value="9"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Longitude__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Longitude  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="13"/>
+<xsd:fractionDigits value="9"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SpaMedware__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>SpaMedware  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="enhanceBorder__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Enhanced border sign up date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AccountRecord__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>AccountRecord  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TempShippingCountry__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>TempShippingCountry  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TempShippingPostalCode__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>TempShippingPostalCode  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TotalCoupons__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Coupons  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="newBeautyOptInDate__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>New Beauty Opt In Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TempShippingState__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>TempShippingState  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="TempShippingStreet__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>TempShippingStreet  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AddressChangeVerified__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Address Change Verified  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="visOptInDate__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Vis Opt In Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="velababeOptInDate__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>VelaBABE Opt In Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Distributes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Distributes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4099"/>
+<xsd:enumeration value="Adeline (Prof. Beauty)"/>
+<xsd:enumeration value="Candela"/>
+<xsd:enumeration value="CO2RE"/>
+<xsd:enumeration value="Dental"/>
+<xsd:enumeration value="Elure"/>
+<xsd:enumeration value="eSpa"/>
+<xsd:enumeration value="Profound"/>
+<xsd:enumeration value="Syneron"/>
+<xsd:enumeration value="Syneron non-medical"/>
+<xsd:enumeration value="Ultrashape"/>
+<xsd:enumeration value="Velashape2"/>
+<xsd:enumeration value="VelaShape III"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Account_from_e_store__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account from e-store  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Principal_Contact__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Principal Contact  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Top_Region__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Top Region  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Days_Since_Activity__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Days Since Activity  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Google_Maps_Link__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Google Maps Link  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Tax_Resolve__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Tax Exempt  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Accout_Number_Candela__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account Number - Candela-Oracle  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="200"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Inactive_Reason__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Inactive Reason  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Former Employee"/>
+<xsd:enumeration value="Internal Use Only"/>
+<xsd:enumeration value="Merged"/>
+<xsd:enumeration value="Out Of Business"/>
+<xsd:enumeration value="Candela Last Serviced &gt;2 Years"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Product_Referrence__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Product Reference  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4099"/>
+<xsd:enumeration value="Alex TriVantage 1064nm LPL Handpiece"/>
+<xsd:enumeration value="Alex TriVantage 532nm LPL Handpiece"/>
+<xsd:enumeration value="Alex TriVantage System"/>
+<xsd:enumeration value="CO2RE Intima"/>
+<xsd:enumeration value="CO2RE System"/>
+<xsd:enumeration value="DCD Cryogen"/>
+<xsd:enumeration value="eLase"/>
+<xsd:enumeration value="eLaser"/>
+<xsd:enumeration value="eLight"/>
+<xsd:enumeration value="elos plus"/>
+<xsd:enumeration value="Elure"/>
+<xsd:enumeration value="eMatrix"/>
+<xsd:enumeration value="eMax"/>
+<xsd:enumeration value="eStyle"/>
+<xsd:enumeration value="etwo"/>
+<xsd:enumeration value="FacialH20"/>
+<xsd:enumeration value="GentleLASE Pro"/>
+<xsd:enumeration value="GentleMAX"/>
+<xsd:enumeration value="GentleMAX Pro"/>
+<xsd:enumeration value="GentleYAG"/>
+<xsd:enumeration value="GentleYAG Pro"/>
+<xsd:enumeration value="LipoLite"/>
+<xsd:enumeration value="LiteTouch"/>
+<xsd:enumeration value="MGL"/>
+<xsd:enumeration value="PICOWAY"/>
+<xsd:enumeration value="Profound"/>
+<xsd:enumeration value="Qualdralase"/>
+<xsd:enumeration value="SmoothBeam"/>
+<xsd:enumeration value="Synercool"/>
+<xsd:enumeration value="Ultrashape"/>
+<xsd:enumeration value="Vbeam Perfecta"/>
+<xsd:enumeration value="VelaShape"/>
+<xsd:enumeration value="Velashape II"/>
+<xsd:enumeration value="Velashape III"/>
+<xsd:enumeration value="Velasmooth"/>
+<xsd:enumeration value="Velasmooth pro"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Sub_Category__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sub Category  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="CORE"/>
+<xsd:enumeration value="NON - CORE"/>
+<xsd:enumeration value="EMPLOYEE"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Years_In_Business__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Years In Business  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="0-1"/>
+<xsd:enumeration value="1-3"/>
+<xsd:enumeration value="3-5"/>
+<xsd:enumeration value="5+"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="velaozOptInDate__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>velaOz Opt In Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Lead_Converted__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Lead Converted  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Sales_Dept_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sales Dept. Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="3"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Total_ISB_Under_Contract__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Installed Product Under Contract  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Tax_Registered__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Tax Registered  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Yes"/>
+<xsd:enumeration value="No"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="VAT_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>VAT Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="50"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="geopointe__Geocode__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Geocode  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Legal_Operating_Account_Name__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Legal Operating / Account Name  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Hide_from_clinic_finder__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Hide from clinic finder  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Oracle_Bill_To_Site_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Oracle Bill To Site Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="15"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Oracle_Ship_To_Site_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Oracle Ship To Site Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="ISR_Site_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>ISR Site Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Billing_County__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing County  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Shipping_County__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping County  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Competitor_System_Owned__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Competitor System Owned  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4099"/>
+<xsd:enumeration value="Aerolase - LightPod Era-2940nm"/>
+<xsd:enumeration value="Aerolase - LightPod Forte-1064nm"/>
+<xsd:enumeration value="Aerolase - LigthPod Neo-1064nm"/>
+<xsd:enumeration value="Alma - Acent"/>
+<xsd:enumeration value="Alma - Harmony"/>
+<xsd:enumeration value="Alma - Impact"/>
+<xsd:enumeration value="Alma - Pixel CO2"/>
+<xsd:enumeration value="Alma - Soprano"/>
+<xsd:enumeration value="Alma - Vshape"/>
+<xsd:enumeration value="Astanza - Duality"/>
+<xsd:enumeration value="Astanza - Eternity"/>
+<xsd:enumeration value="Astanza - Revolution"/>
+<xsd:enumeration value="Astanza - Trinity"/>
+<xsd:enumeration value="BTL - Exilis"/>
+<xsd:enumeration value="BTL - Vanquish Me"/>
+<xsd:enumeration value="CoolTouch - Cool Lipo"/>
+<xsd:enumeration value="CoolTouch - Cool Lipo Tiro"/>
+<xsd:enumeration value="CoolTouch - CT3Plus"/>
+<xsd:enumeration value="CoolTouch - CTEV"/>
+<xsd:enumeration value="CoolTouch - Varia"/>
+<xsd:enumeration value="Cutera - AcuTip"/>
+<xsd:enumeration value="Cutera - Cool Glide Platform"/>
+<xsd:enumeration value="Cutera - Excel V"/>
+<xsd:enumeration value="Cutera - Limelight"/>
+<xsd:enumeration value="Cutera - Pearl"/>
+<xsd:enumeration value="Cutera - ProWave"/>
+<xsd:enumeration value="Cutera - Solera Platform"/>
+<xsd:enumeration value="Cutera - Titan"/>
+<xsd:enumeration value="Cutera - TruSculpt"/>
+<xsd:enumeration value="Cutera - VariLite"/>
+<xsd:enumeration value="Cutera - Xeo Platform"/>
+<xsd:enumeration value="Cynosure - Acclaim™"/>
+<xsd:enumeration value="Cynosure - Accolade™"/>
+<xsd:enumeration value="Cynosure - Affinity QS™"/>
+<xsd:enumeration value="Cynosure - Affirm®"/>
+<xsd:enumeration value="Cynosure - Apogee®"/>
+<xsd:enumeration value="Cynosure - Cellulaze™"/>
+<xsd:enumeration value="Cynosure - Cynergy™"/>
+<xsd:enumeration value="Cynosure - Elite MPX™"/>
+<xsd:enumeration value="Cynosure - Elite™"/>
+<xsd:enumeration value="Cynosure - MedLite® C6"/>
+<xsd:enumeration value="Cynosure - PicoSure™"/>
+<xsd:enumeration value="Cynosure - PinPointe™"/>
+<xsd:enumeration value="Cynosure - PrecisionTX™"/>
+<xsd:enumeration value="Cynosure - RevLite SI®"/>
+<xsd:enumeration value="Cynosure - Smartlipo®"/>
+<xsd:enumeration value="Cynosure - SmartSkin®"/>
+<xsd:enumeration value="Cynosure - SmoothShapes® XV"/>
+<xsd:enumeration value="Cynosure - TriActive™"/>
+<xsd:enumeration value="Eclipse Aesthetics - EndyPro"/>
+<xsd:enumeration value="Eclipse Aesthetics -Equinox Co2 Laser"/>
+<xsd:enumeration value="Eclipse Aesthetics -SmoothCool HR/SR"/>
+<xsd:enumeration value="Eclipse Aesthetics -Tri-Beam"/>
+<xsd:enumeration value="Elleman - Apex"/>
+<xsd:enumeration value="Elleman - Cheveux, 810nm"/>
+<xsd:enumeration value="Elleman - Cortex, 2940nm"/>
+<xsd:enumeration value="Elleman - Matrix Fractional Co2"/>
+<xsd:enumeration value="Elleman - Pelleve"/>
+<xsd:enumeration value="Elleman - TriLase"/>
+<xsd:enumeration value="EndyMed Systems"/>
+<xsd:enumeration value="Fotona - QX MAX"/>
+<xsd:enumeration value="Fotona - SP Line"/>
+<xsd:enumeration value="Fotona - XP Line"/>
+<xsd:enumeration value="Fotona - XS Dynamis"/>
+<xsd:enumeration value="Light Age - EpiCare-DUO"/>
+<xsd:enumeration value="Light Age - EpiCare™"/>
+<xsd:enumeration value="Light Age - Q-Clear™"/>
+<xsd:enumeration value="Light Age - Ta2 Eraser™"/>
+<xsd:enumeration value="Lumenis - Acupulse"/>
+<xsd:enumeration value="Lumenis - Aluma"/>
+<xsd:enumeration value="Lumenis - Light Sheer"/>
+<xsd:enumeration value="Lumenis - LightSheer Duet"/>
+<xsd:enumeration value="Lumenis - M22"/>
+<xsd:enumeration value="Lumenis - QMAX"/>
+<xsd:enumeration value="Lumenis - Ultrapulse"/>
+<xsd:enumeration value="Lumenis - Vaser Shape"/>
+<xsd:enumeration value="Lutronic - Accusculpt"/>
+<xsd:enumeration value="Lutronic - Advantage"/>
+<xsd:enumeration value="Lutronic - Clarity"/>
+<xsd:enumeration value="Lutronic - ECo2"/>
+<xsd:enumeration value="Lutronic - Healite"/>
+<xsd:enumeration value="Lutronic - Infini"/>
+<xsd:enumeration value="Lutronic - Spectra"/>
+<xsd:enumeration value="Other"/>
+<xsd:enumeration value="Palomar - Acleara Acne Clearing System"/>
+<xsd:enumeration value="Palomar - Adivive Fat Transfer System"/>
+<xsd:enumeration value="Palomar - Emerge"/>
+<xsd:enumeration value="Palomar - EsteLux IPL"/>
+<xsd:enumeration value="Palomar - Icon"/>
+<xsd:enumeration value="Palomar - Medilux"/>
+<xsd:enumeration value="Palomar - QYAG 5"/>
+<xsd:enumeration value="Palomar - SlimLipo"/>
+<xsd:enumeration value="Palomar - StarLux Laser &amp; IPL System"/>
+<xsd:enumeration value="Palomar - Vectus"/>
+<xsd:enumeration value="Quanta - IPL Series"/>
+<xsd:enumeration value="Quanta - Light Series"/>
+<xsd:enumeration value="Quanta - Q-Plus"/>
+<xsd:enumeration value="Sciton - BBL"/>
+<xsd:enumeration value="Sciton - ClearScan ALX"/>
+<xsd:enumeration value="Sciton - ClearScan YAG"/>
+<xsd:enumeration value="Sciton - Contour"/>
+<xsd:enumeration value="Sciton - Joule"/>
+<xsd:enumeration value="Sciton - Profractional"/>
+<xsd:enumeration value="Sciton - ProLipo"/>
+<xsd:enumeration value="Sciton - Pro-V"/>
+<xsd:enumeration value="Sciton - SkinTyte"/>
+<xsd:enumeration value="Sciton - ThermaScan"/>
+<xsd:enumeration value="Sharplight"/>
+<xsd:enumeration value="Solta Medical - Clear + Brilliant"/>
+<xsd:enumeration value="Solta Medical - Fraxel Repair"/>
+<xsd:enumeration value="Solta Medical - Fraxel Restore"/>
+<xsd:enumeration value="Solta Medical - Isolaz"/>
+<xsd:enumeration value="Solta Medical - LipoSonic"/>
+<xsd:enumeration value="Solta Medical - Thermage"/>
+<xsd:enumeration value="Solta Medical - Vaserlipo"/>
+<xsd:enumeration value="Solta Medical - VaserShape"/>
+<xsd:enumeration value="Ulthera - Ultherapy"/>
+<xsd:enumeration value="Venus Freeze"/>
+<xsd:enumeration value="Viora Reaction"/>
+<xsd:enumeration value="Zeltiq - Coolsculpt"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="BellArmonie_Account__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>BellArmonie Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Net_30__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Net 30? (Online Orders)  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Body_Shaping_Treatments_Last_Update__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Body Shaping Treatments Last Update  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Deals_Discounts__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deals/Discounts  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Male_Female_Ratio__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Male / Female Ratio  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="6"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Most_Common_Areas_Treatments__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Most Common Areas Treatments  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Abdomen"/>
+<xsd:enumeration value="Flanks"/>
+<xsd:enumeration value="Other"/>
+<xsd:enumeration value="Thighs"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Package_Price__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Package Price  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="6"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Patient_Volume__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Patient Volume (m)  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="6"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Protocols__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Protocols  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Satisfactions__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Satisfaction Level  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Very Satisfied"/>
+<xsd:enumeration value="Satisfied"/>
+<xsd:enumeration value="Nature"/>
+<xsd:enumeration value="Unsatisfied"/>
+<xsd:enumeration value="Very unsatisfied"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Single_Treatment_Price__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Single Treatment Price  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="6"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Therapy_Combined__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Therapy Combined  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="UltraShape_User_Level__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>UltraShape User Level  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Ultrashape_Account__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ultrashape Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Last_time_purchased_date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last time purchased – date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Total_FTZ_to_Date_Qty__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total FTZ to Date Qty  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="6"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="UltraShape_KOL__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>UltraShape KOL  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AVA_SFCORE__Billing_Last_Validated__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Validated  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="MAB__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>MAB  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AVA_SFCORE__ExemptEntityType__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Entity/Use Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="AVA_SFCORE__Shipping_Last_Validated__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Validated  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Credit_Hold__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Credit Hold  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Pay_In_Advance__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Pay In Advance  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Accounts_Power_of_1__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Accounts Power of 1  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="UltraShape_KOL_Discount_Expiration_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>UltraShape KOL Discount Expiration Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_AccountWithSecondary_Operating_Unit__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account With Secondary Operating Unit  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Operating_Unit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Primary Operating Unit  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="82-Candela Corporation U.S. Ops"/>
+<xsd:enumeration value="166-Syneron-Candela, S.A. (O.U.)"/>
+<xsd:enumeration value="170-Candela Italia S.R.L -O.U."/>
+<xsd:enumeration value="172-Candela United Kingdom. - O.U."/>
+<xsd:enumeration value="206-Candela France, S.A. - O.U."/>
+<xsd:enumeration value="209-Candela Germany, S.A. - O.U."/>
+<xsd:enumeration value="226-Bellarmonie - O.U."/>
+<xsd:enumeration value="268-Syneron Canada-O.U."/>
+<xsd:enumeration value="286-Light Instrument Israel-O.U."/>
+<xsd:enumeration value="270-Syneron Medical Israel-O.U."/>
+<xsd:enumeration value="278-Syneron Germany-O.U."/>
+<xsd:enumeration value="371-Candela Australia O.U."/>
+<xsd:enumeration value="369-Syneron China O.U."/>
+<xsd:enumeration value="372-Candela Japan O.U."/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Secondary_Operating_Unit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Secondary Operating Unit  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="82-Candela Corporation U.S. Ops"/>
+<xsd:enumeration value="166-Syneron-Candela, S.A. (O.U.)"/>
+<xsd:enumeration value="170-Candela Italia S.R.L -O.U."/>
+<xsd:enumeration value="172-Candela United Kingdom. - O.U."/>
+<xsd:enumeration value="206-Candela France, S.A. - O.U."/>
+<xsd:enumeration value="209-Candela Germany, S.A. - O.U."/>
+<xsd:enumeration value="226-Bellarmonie - O.U."/>
+<xsd:enumeration value="268-Syneron Canada-O.U."/>
+<xsd:enumeration value="286-Light Instrument Israel-O.U."/>
+<xsd:enumeration value="270-Syneron Medical Israel-O.U."/>
+<xsd:enumeration value="278-Syneron Germany-O.U."/>
+<xsd:enumeration value="371-Candela Australia O.U."/>
+<xsd:enumeration value="369-Syneron China O.U."/>
+<xsd:enumeration value="372-Candela Japan O.U."/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Total_Number_Of_Active_Install_Base__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Number Of Active Install Product  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Credit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Credit  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="13"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Primary_Unit_Shipping_location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Primary Unit Shipping location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Secondary_Unit_shipping_location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Secondary Unit shipping location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Installed_products_model__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Installed products model  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__BAR__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Address Record Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__BAS__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Address Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__BAV__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Address Vacancy  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__BRDI__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Residential Delivery Indicator  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="12"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__BTZ__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Timezone  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="48"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__SAR__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Address Record Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__SAS__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Address Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__SAV__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Address Vacancy  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__SRDI__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Residential Delivery Indicator  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="12"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CloudingoAgent__STZ__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Timezone  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="48"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Total_Number_Of_Install_Base__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Number Of Install Product  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Need_Schedular__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Need Schedular  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_JP_Excel_Line_Key__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>JP Excel Line Key  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_JP_Customer_Name_In_Kanji__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>JP Customer Name In Kanji  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Last_Update_For_Marketing__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Update For Marketing  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Latitude_GP__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Latitude (GP)  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Longitude_GP__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Longitude (GP)  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Interface_Error_Desc__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface Error Desc.  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Interface_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="S"/>
+<xsd:enumeration value="P"/>
+<xsd:enumeration value="E"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Interface_Update__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface Update  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Region_Segment__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Region Segment  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Send_To_Oracle__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Send To Oracle  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Application_Interest__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Application Interest  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4099"/>
+<xsd:enumeration value="Ablative resurfacing CO2"/>
+<xsd:enumeration value="Acne"/>
+<xsd:enumeration value="Acne scars"/>
+<xsd:enumeration value="Body Contouring"/>
+<xsd:enumeration value="Cellulite treatment"/>
+<xsd:enumeration value="Circumferential reduction"/>
+<xsd:enumeration value="Cosmetic Laser Treatment"/>
+<xsd:enumeration value="Dermabrasion"/>
+<xsd:enumeration value="Facials/Microdermabrasion"/>
+<xsd:enumeration value="Facial Treatment"/>
+<xsd:enumeration value="Fractional non-ablative skin treatment"/>
+<xsd:enumeration value="Fractional resurfacing"/>
+<xsd:enumeration value="Hair Removal"/>
+<xsd:enumeration value="Laser Liposuction"/>
+<xsd:enumeration value="Leg Vein"/>
+<xsd:enumeration value="Other"/>
+<xsd:enumeration value="Pigmented Lesions"/>
+<xsd:enumeration value="Scar"/>
+<xsd:enumeration value="Sion"/>
+<xsd:enumeration value="Skin cooling"/>
+<xsd:enumeration value="Skin lightening"/>
+<xsd:enumeration value="Skin Rejuvenation"/>
+<xsd:enumeration value="Skin Tightening"/>
+<xsd:enumeration value="Skin Toning"/>
+<xsd:enumeration value="Skin whitening"/>
+<xsd:enumeration value="Striae Treatment"/>
+<xsd:enumeration value="Sublative Rejuvenation"/>
+<xsd:enumeration value="Sublime skin tightening"/>
+<xsd:enumeration value="Tattoo Removal"/>
+<xsd:enumeration value="Triniti"/>
+<xsd:enumeration value="UV treatment"/>
+<xsd:enumeration value="Vascular lesions"/>
+<xsd:enumeration value="Wrinkle Treatment"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Net_Term__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Net Term  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="30 Net"/>
+<xsd:enumeration value="45 Net"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="JP_Old_Account__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>JP Old Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="150"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Community_AUS_Sharing_Rule__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Community AUS Sharing Rule  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Sharing_With_Community_AUS__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sharing With Community AUS  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="zaapit__Hierarchy_Level__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Hierarchy Level  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Last_Visit_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Visit Status  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Last_Visit_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Visit Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Total_Won_Opportunities__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Won Opportunities  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Recommended_Consolidation_Ship_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Recommended Consolidation Ship Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Saturday"/>
+<xsd:enumeration value="Sunday"/>
+<xsd:enumeration value="Monday"/>
+<xsd:enumeration value="Tuesday"/>
+<xsd:enumeration value="Wednesday"/>
+<xsd:enumeration value="Thursday"/>
+<xsd:enumeration value="Friday"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_ID_In_Production__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>ID In Production  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Subscription_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Subscription Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Tier_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Tier Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Preferred Partner"/>
+<xsd:enumeration value="Prestige Partner"/>
+<xsd:enumeration value="Elite Partner"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="W_9__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>W-9  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Eligible_Points__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Eligible Points  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Pending_For_Redemption__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Pending For Redemption  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Points_Balance__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Points Balance  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Transactions_Points__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Transactions in (+)  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Preferred_Distributor_User_For_Community__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Preferred Distributor User For Community  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Tax_ID__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Tax ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="30"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Credit_Hold_in_Operating_Unit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Credit Hold in Operating Unit  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Currency_For_Service__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Currency For Service  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="AUD"/>
+<xsd:enumeration value="CAD"/>
+<xsd:enumeration value="CNY"/>
+<xsd:enumeration value="EUR"/>
+<xsd:enumeration value="GBP"/>
+<xsd:enumeration value="ILS"/>
+<xsd:enumeration value="JPY"/>
+<xsd:enumeration value="USD"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CPP_Account__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>CPP Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="ChildObjects" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Return" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Id" type="xsd:string"/>
+<xsd:element name="Success" type="xsd:boolean"/>
+<xsd:element name="Created" minOccurs="0" type="xsd:boolean"/>
+<xsd:element name="Errors" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="error"  minOccurs="0" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="StatusCode" type="xsd:string"/>
+<xsd:element name="message" type="xsd:string"/>
+<xsd:element name="fields" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

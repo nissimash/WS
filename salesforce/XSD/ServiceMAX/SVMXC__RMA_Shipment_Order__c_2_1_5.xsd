@@ -1,0 +1,4025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+<xsd:element name="SVMXC__RMA_Shipment_Order__c">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="row" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="ObjectID" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Id" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="SOQL" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="WHERE" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Fields" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="type" type="xsd:string" minOccurs="0"/>
+<xsd:element name="Id" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Record ID  Filterable. IdLookup. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="OwnerId" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Owner ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="IsDeleted" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deleted  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Name" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Order Number  Filterable. IdLookup. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CurrencyIsoCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Currency ISO Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3"/>
+<xsd:enumeration value="AUD"/>
+<xsd:enumeration value="GBP"/>
+<xsd:enumeration value="CAD"/>
+<xsd:enumeration value="CNY"/>
+<xsd:enumeration value="EUR"/>
+<xsd:enumeration value="ILS"/>
+<xsd:enumeration value="JPY"/>
+<xsd:enumeration value="USD"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="RecordTypeId" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Record Type ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CreatedDate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created Date  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CreatedById" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created By ID  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastModifiedDate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Modified Date  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastModifiedById" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Modified By ID  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SystemModstamp" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>System Modstamp  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastActivityDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Activity Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastViewedDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Viewed Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastReferencedDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Referenced Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Address_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Address Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Account Billing Address"/>
+<xsd:enumeration value="Account Shipping Address"/>
+<xsd:enumeration value="Contact Mailing Address"/>
+<xsd:enumeration value="Contact Other Address"/>
+<xsd:enumeration value="Installed Product Address"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Bill_To__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Bill To  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Sender"/>
+<xsd:enumeration value="Recipient"/>
+<xsd:enumeration value="Third Party"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Billing_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Contract"/>
+<xsd:enumeration value="Loan"/>
+<xsd:enumeration value="Warranty"/>
+<xsd:enumeration value="Billable"/>
+<xsd:enumeration value="Non-billable"/>
+<xsd:enumeration value="Sales Support"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Canceled_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Canceled By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Canceled_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Canceled On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Case__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Case  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Closed_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Closed By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Closed_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Closed On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Company__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Contact__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Contact  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Delivery_Option__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Delivery Option  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="AM"/>
+<xsd:enumeration value="PM"/>
+<xsd:enumeration value="Two Day"/>
+<xsd:enumeration value="Saturday"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Destination_City__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To City  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Destination_Country__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To Country  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Afghanistan"/>
+<xsd:enumeration value="Albania"/>
+<xsd:enumeration value="Algeria"/>
+<xsd:enumeration value="American Samoa"/>
+<xsd:enumeration value="Andorra"/>
+<xsd:enumeration value="Anguilla"/>
+<xsd:enumeration value="Antarctica"/>
+<xsd:enumeration value="Antigua And Barbuda"/>
+<xsd:enumeration value="Argentina"/>
+<xsd:enumeration value="Armenia"/>
+<xsd:enumeration value="Aruba"/>
+<xsd:enumeration value="Australia"/>
+<xsd:enumeration value="Austria"/>
+<xsd:enumeration value="Ayerbaijan"/>
+<xsd:enumeration value="Bahamas, The"/>
+<xsd:enumeration value="Bahrain"/>
+<xsd:enumeration value="Bangladesh"/>
+<xsd:enumeration value="Barbados"/>
+<xsd:enumeration value="Belarus"/>
+<xsd:enumeration value="Belize"/>
+<xsd:enumeration value="Belgium"/>
+<xsd:enumeration value="Benin"/>
+<xsd:enumeration value="Bermuda"/>
+<xsd:enumeration value="Bhutan"/>
+<xsd:enumeration value="Bolivia"/>
+<xsd:enumeration value="Bouvet Is"/>
+<xsd:enumeration value="Bosnia and Herzegovina"/>
+<xsd:enumeration value="Botswana"/>
+<xsd:enumeration value="Brazil"/>
+<xsd:enumeration value="British Indian Ocean Territory"/>
+<xsd:enumeration value="Brunei"/>
+<xsd:enumeration value="Bulgaria"/>
+<xsd:enumeration value="Burkina Faso"/>
+<xsd:enumeration value="Burundi"/>
+<xsd:enumeration value="Cambodia"/>
+<xsd:enumeration value="Cameroon"/>
+<xsd:enumeration value="Canada"/>
+<xsd:enumeration value="Cape Verde"/>
+<xsd:enumeration value="Cayman Is"/>
+<xsd:enumeration value="Central African Republic"/>
+<xsd:enumeration value="Chad"/>
+<xsd:enumeration value="Chile"/>
+<xsd:enumeration value="China"/>
+<xsd:enumeration value="China (Macau S.A.R.)"/>
+<xsd:enumeration value="Christmas Is"/>
+<xsd:enumeration value="Cocos (Keeling) Is"/>
+<xsd:enumeration value="Colombia"/>
+<xsd:enumeration value="Comoros"/>
+<xsd:enumeration value="Cook Islands"/>
+<xsd:enumeration value="Costa Rica"/>
+<xsd:enumeration value="Cote D&apos;Ivoire (Ivory Coast)"/>
+<xsd:enumeration value="Croatia (Hrvatska)"/>
+<xsd:enumeration value="Cyprus"/>
+<xsd:enumeration value="Czech Republic"/>
+<xsd:enumeration value="Democratic Republic of the Congo"/>
+<xsd:enumeration value="Denmark"/>
+<xsd:enumeration value="Dominica"/>
+<xsd:enumeration value="Dominican Republic"/>
+<xsd:enumeration value="Djibouti"/>
+<xsd:enumeration value="East Timor"/>
+<xsd:enumeration value="Ecuador"/>
+<xsd:enumeration value="Egypt"/>
+<xsd:enumeration value="El Salvador"/>
+<xsd:enumeration value="Equatorial Guinea"/>
+<xsd:enumeration value="Eritrea"/>
+<xsd:enumeration value="Estonia"/>
+<xsd:enumeration value="Ethiopia"/>
+<xsd:enumeration value="Falkland Is (Is Malvinas)"/>
+<xsd:enumeration value="Faroe Islands"/>
+<xsd:enumeration value="Fiji Islands"/>
+<xsd:enumeration value="Finland"/>
+<xsd:enumeration value="France"/>
+<xsd:enumeration value="French Guiana"/>
+<xsd:enumeration value="French Polynesia"/>
+<xsd:enumeration value="French Southern Territories"/>
+<xsd:enumeration value="F.Y.R.O. Macedonia"/>
+<xsd:enumeration value="Gabon"/>
+<xsd:enumeration value="Gambia, The"/>
+<xsd:enumeration value="Georgia"/>
+<xsd:enumeration value="Germany"/>
+<xsd:enumeration value="Ghana"/>
+<xsd:enumeration value="Gibraltar"/>
+<xsd:enumeration value="Greece"/>
+<xsd:enumeration value="Greenland"/>
+<xsd:enumeration value="Grenada"/>
+<xsd:enumeration value="Guadeloupe"/>
+<xsd:enumeration value="Guam"/>
+<xsd:enumeration value="Guatemala"/>
+<xsd:enumeration value="Guinea"/>
+<xsd:enumeration value="Guinea-Bissau"/>
+<xsd:enumeration value="Guyana"/>
+<xsd:enumeration value="Haiti"/>
+<xsd:enumeration value="Heard and McDonald Is"/>
+<xsd:enumeration value="Honduras"/>
+<xsd:enumeration value="Hungary"/>
+<xsd:enumeration value="Iceland"/>
+<xsd:enumeration value="India"/>
+<xsd:enumeration value="Indonesia"/>
+<xsd:enumeration value="Ireland"/>
+<xsd:enumeration value="Israel"/>
+<xsd:enumeration value="Italy"/>
+<xsd:enumeration value="Jamaica"/>
+<xsd:enumeration value="Japan"/>
+<xsd:enumeration value="Jordan"/>
+<xsd:enumeration value="Kayakhstan"/>
+<xsd:enumeration value="Kenya"/>
+<xsd:enumeration value="Kiribati"/>
+<xsd:enumeration value="Korea, South"/>
+<xsd:enumeration value="Kuwait"/>
+<xsd:enumeration value="Kyrgyzstan"/>
+<xsd:enumeration value="Laos"/>
+<xsd:enumeration value="Latvia"/>
+<xsd:enumeration value="Lebanon"/>
+<xsd:enumeration value="Lesotho"/>
+<xsd:enumeration value="Liberia"/>
+<xsd:enumeration value="Liechtenstein"/>
+<xsd:enumeration value="Lithuania"/>
+<xsd:enumeration value="Luxembourg"/>
+<xsd:enumeration value="Madagascar"/>
+<xsd:enumeration value="Malawi"/>
+<xsd:enumeration value="Malaysia"/>
+<xsd:enumeration value="Maldives"/>
+<xsd:enumeration value="Mali"/>
+<xsd:enumeration value="Malta"/>
+<xsd:enumeration value="Marshall Is"/>
+<xsd:enumeration value="Mauritania"/>
+<xsd:enumeration value="Mauritius"/>
+<xsd:enumeration value="Martinique"/>
+<xsd:enumeration value="Mayotte"/>
+<xsd:enumeration value="Mexico"/>
+<xsd:enumeration value="Micronesia"/>
+<xsd:enumeration value="Moldova"/>
+<xsd:enumeration value="Monaco"/>
+<xsd:enumeration value="Mongolia"/>
+<xsd:enumeration value="Montserrat"/>
+<xsd:enumeration value="Morocco"/>
+<xsd:enumeration value="Mozambique"/>
+<xsd:enumeration value="Myanmar"/>
+<xsd:enumeration value="Namibia"/>
+<xsd:enumeration value="Nauru"/>
+<xsd:enumeration value="Nepal"/>
+<xsd:enumeration value="Netherlands, The"/>
+<xsd:enumeration value="Netherlands Antilles"/>
+<xsd:enumeration value="New Caledonia"/>
+<xsd:enumeration value="New Zealand"/>
+<xsd:enumeration value="Nicaragua"/>
+<xsd:enumeration value="Niger"/>
+<xsd:enumeration value="Nigeria"/>
+<xsd:enumeration value="Niue"/>
+<xsd:enumeration value="Norway"/>
+<xsd:enumeration value="Norfolk Island"/>
+<xsd:enumeration value="Northern Mariana Is"/>
+<xsd:enumeration value="Oman"/>
+<xsd:enumeration value="Pakistan"/>
+<xsd:enumeration value="Palau"/>
+<xsd:enumeration value="Panama"/>
+<xsd:enumeration value="Papua new Guinea"/>
+<xsd:enumeration value="Paraguay"/>
+<xsd:enumeration value="Peru"/>
+<xsd:enumeration value="Philippines"/>
+<xsd:enumeration value="Pitcairn Island"/>
+<xsd:enumeration value="Poland"/>
+<xsd:enumeration value="Portugal"/>
+<xsd:enumeration value="Puerto Rico"/>
+<xsd:enumeration value="Qatar"/>
+<xsd:enumeration value="Republic of the Congo"/>
+<xsd:enumeration value="Reunion"/>
+<xsd:enumeration value="Romania"/>
+<xsd:enumeration value="Russia"/>
+<xsd:enumeration value="Saint Helena"/>
+<xsd:enumeration value="Saint Kitts And Nevis"/>
+<xsd:enumeration value="Saint Lucia"/>
+<xsd:enumeration value="Saint Pierre and Miquelon"/>
+<xsd:enumeration value="Saint Vincent And The Grenadines"/>
+<xsd:enumeration value="Samoa"/>
+<xsd:enumeration value="San Marino"/>
+<xsd:enumeration value="Sao Tome and Principe"/>
+<xsd:enumeration value="Saudi Arabia"/>
+<xsd:enumeration value="Senegal"/>
+<xsd:enumeration value="Seychelles"/>
+<xsd:enumeration value="Sierra Leone"/>
+<xsd:enumeration value="Singapore"/>
+<xsd:enumeration value="Slovakia"/>
+<xsd:enumeration value="Slovenia"/>
+<xsd:enumeration value="Solomon Islands"/>
+<xsd:enumeration value="Somalia"/>
+<xsd:enumeration value="South Africa"/>
+<xsd:enumeration value="South Georgia"/>
+<xsd:enumeration value="Spain"/>
+<xsd:enumeration value="Sri Lanka"/>
+<xsd:enumeration value="Suriname"/>
+<xsd:enumeration value="Svalbard And Jan Mayen Is"/>
+<xsd:enumeration value="Swaziland"/>
+<xsd:enumeration value="Sweden"/>
+<xsd:enumeration value="Switzerland"/>
+<xsd:enumeration value="Syria"/>
+<xsd:enumeration value="Taiwan"/>
+<xsd:enumeration value="Tajikistan"/>
+<xsd:enumeration value="Tanzania"/>
+<xsd:enumeration value="Thailand"/>
+<xsd:enumeration value="Timor-Leste"/>
+<xsd:enumeration value="Togo"/>
+<xsd:enumeration value="Tokelau"/>
+<xsd:enumeration value="Tonga"/>
+<xsd:enumeration value="Trinidad And Tobago"/>
+<xsd:enumeration value="Tunisia"/>
+<xsd:enumeration value="Turkey"/>
+<xsd:enumeration value="Turks And Caicos Is"/>
+<xsd:enumeration value="Turkmenistan"/>
+<xsd:enumeration value="Tuvalu"/>
+<xsd:enumeration value="Uganda"/>
+<xsd:enumeration value="Ukraine"/>
+<xsd:enumeration value="United Arab Emirates"/>
+<xsd:enumeration value="United Kingdom"/>
+<xsd:enumeration value="United States"/>
+<xsd:enumeration value="United States Minor Outlying Is"/>
+<xsd:enumeration value="Uruguay"/>
+<xsd:enumeration value="Uzbekistan"/>
+<xsd:enumeration value="Vanuatu"/>
+<xsd:enumeration value="Vatican City State (Holy See)"/>
+<xsd:enumeration value="Venezuela"/>
+<xsd:enumeration value="Vietnam"/>
+<xsd:enumeration value="Virgin Islands (British)"/>
+<xsd:enumeration value="Virgin Islands (US)"/>
+<xsd:enumeration value="Wallis And Futuna Islands"/>
+<xsd:enumeration value="Western Sahara"/>
+<xsd:enumeration value="Yemen"/>
+<xsd:enumeration value="Zambia"/>
+<xsd:enumeration value="Zimbabwe"/>
+<xsd:enumeration value="Hong Kong"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Destination_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Destination_State__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To State  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Destination_Street__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To Street  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Destination_Zip__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To Zip  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__EndpointURL__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>EndpointURL  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Expected_Delivery_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Expected Ship Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Expected_Receive_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Expected Receipt Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Fulfillment_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Fulfillment Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Repair"/>
+<xsd:enumeration value="Sales"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__IsPartnerRecord__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>IsPartnerRecord  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__IsPartner__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>IsPartner  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Master_Order__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Master Order  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__On_Hold__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>On Hold  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Order_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Order Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Open"/>
+<xsd:enumeration value="Partial"/>
+<xsd:enumeration value="Closed"/>
+<xsd:enumeration value="Canceled"/>
+<xsd:enumeration value="Shipment Complete"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Order_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Order Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Return"/>
+<xsd:enumeration value="Exchange"/>
+<xsd:enumeration value="Shipping Only"/>
+<xsd:enumeration value="Non-Billable Parts Order"/>
+<xsd:enumeration value="Billable Parts Order"/>
+<xsd:enumeration value="Defective RMA"/>
+<xsd:enumeration value="Unused RMA"/>
+<xsd:enumeration value="Loan"/>
+<xsd:enumeration value="Repair"/>
+<xsd:enumeration value="Contract Consumables"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Partner_Account__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Partner Account  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Partner_Contact__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Partner Contact  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Parts_Request__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Parts Request  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Priority__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Priority  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="1-High"/>
+<xsd:enumeration value="2"/>
+<xsd:enumeration value="3-Medium"/>
+<xsd:enumeration value="4"/>
+<xsd:enumeration value="5-Low"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__RMA_Age_Bucket__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>RMA Age Bucket  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__RMA_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>RMA Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Internal"/>
+<xsd:enumeration value="External"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Receiving_Courier__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Receiving Courier  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__SESSION_ID__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>SESSION_ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Sales_Order_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sales Order Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Engineer__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Engineer  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Order__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Work Order  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipment_Age_Bucket__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipment Age Bucket  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipment_Reference__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Parts Order Reference  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipping_Courier__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Courier  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipping_Receiving_Notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping/Receiving Notes  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipping_Terms__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Terms  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="EXW"/>
+<xsd:enumeration value="FCA"/>
+<xsd:enumeration value="FAS"/>
+<xsd:enumeration value="FOB"/>
+<xsd:enumeration value="CFR"/>
+<xsd:enumeration value="CIF"/>
+<xsd:enumeration value="CIP"/>
+<xsd:enumeration value="DAF"/>
+<xsd:enumeration value="DES"/>
+<xsd:enumeration value="DEQ"/>
+<xsd:enumeration value="DDU"/>
+<xsd:enumeration value="DDP"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Source_City__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From City  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Source_Country__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From Country  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Afghanistan"/>
+<xsd:enumeration value="Albania"/>
+<xsd:enumeration value="Algeria"/>
+<xsd:enumeration value="American Samoa"/>
+<xsd:enumeration value="Andorra"/>
+<xsd:enumeration value="Anguilla"/>
+<xsd:enumeration value="Antarctica"/>
+<xsd:enumeration value="Antigua And Barbuda"/>
+<xsd:enumeration value="Argentina"/>
+<xsd:enumeration value="Armenia"/>
+<xsd:enumeration value="Aruba"/>
+<xsd:enumeration value="Australia"/>
+<xsd:enumeration value="Austria"/>
+<xsd:enumeration value="Ayerbaijan"/>
+<xsd:enumeration value="Bahamas, The"/>
+<xsd:enumeration value="Bahrain"/>
+<xsd:enumeration value="Bangladesh"/>
+<xsd:enumeration value="Barbados"/>
+<xsd:enumeration value="Belarus"/>
+<xsd:enumeration value="Belize"/>
+<xsd:enumeration value="Belgium"/>
+<xsd:enumeration value="Benin"/>
+<xsd:enumeration value="Bermuda"/>
+<xsd:enumeration value="Bhutan"/>
+<xsd:enumeration value="Bolivia"/>
+<xsd:enumeration value="Bouvet Is"/>
+<xsd:enumeration value="Bosnia and Herzegovina"/>
+<xsd:enumeration value="Botswana"/>
+<xsd:enumeration value="Brazil"/>
+<xsd:enumeration value="British Indian Ocean Territory"/>
+<xsd:enumeration value="Brunei"/>
+<xsd:enumeration value="Bulgaria"/>
+<xsd:enumeration value="Burkina Faso"/>
+<xsd:enumeration value="Burundi"/>
+<xsd:enumeration value="Cambodia"/>
+<xsd:enumeration value="Cameroon"/>
+<xsd:enumeration value="Canada"/>
+<xsd:enumeration value="Cape Verde"/>
+<xsd:enumeration value="Cayman Is"/>
+<xsd:enumeration value="Central African Republic"/>
+<xsd:enumeration value="Chad"/>
+<xsd:enumeration value="Chile"/>
+<xsd:enumeration value="China"/>
+<xsd:enumeration value="China (Macau S.A.R.)"/>
+<xsd:enumeration value="Christmas Is"/>
+<xsd:enumeration value="Cocos (Keeling) Is"/>
+<xsd:enumeration value="Colombia"/>
+<xsd:enumeration value="Comoros"/>
+<xsd:enumeration value="Cook Islands"/>
+<xsd:enumeration value="Costa Rica"/>
+<xsd:enumeration value="Cote D&apos;Ivoire (Ivory Coast)"/>
+<xsd:enumeration value="Croatia (Hrvatska)"/>
+<xsd:enumeration value="Cyprus"/>
+<xsd:enumeration value="Czech Republic"/>
+<xsd:enumeration value="Democratic Republic of the Congo"/>
+<xsd:enumeration value="Denmark"/>
+<xsd:enumeration value="Dominica"/>
+<xsd:enumeration value="Dominican Republic"/>
+<xsd:enumeration value="Djibouti"/>
+<xsd:enumeration value="East Timor"/>
+<xsd:enumeration value="Ecuador"/>
+<xsd:enumeration value="Egypt"/>
+<xsd:enumeration value="El Salvador"/>
+<xsd:enumeration value="Equatorial Guinea"/>
+<xsd:enumeration value="Eritrea"/>
+<xsd:enumeration value="Estonia"/>
+<xsd:enumeration value="Ethiopia"/>
+<xsd:enumeration value="Falkland Is (Is Malvinas)"/>
+<xsd:enumeration value="Faroe Islands"/>
+<xsd:enumeration value="Fiji Islands"/>
+<xsd:enumeration value="Finland"/>
+<xsd:enumeration value="France"/>
+<xsd:enumeration value="French Guiana"/>
+<xsd:enumeration value="French Polynesia"/>
+<xsd:enumeration value="French Southern Territories"/>
+<xsd:enumeration value="F.Y.R.O. Macedonia"/>
+<xsd:enumeration value="Gabon"/>
+<xsd:enumeration value="Gambia, The"/>
+<xsd:enumeration value="Georgia"/>
+<xsd:enumeration value="Germany"/>
+<xsd:enumeration value="Ghana"/>
+<xsd:enumeration value="Gibraltar"/>
+<xsd:enumeration value="Greece"/>
+<xsd:enumeration value="Greenland"/>
+<xsd:enumeration value="Grenada"/>
+<xsd:enumeration value="Guadeloupe"/>
+<xsd:enumeration value="Guam"/>
+<xsd:enumeration value="Guatemala"/>
+<xsd:enumeration value="Guinea"/>
+<xsd:enumeration value="Guinea-Bissau"/>
+<xsd:enumeration value="Guyana"/>
+<xsd:enumeration value="Haiti"/>
+<xsd:enumeration value="Heard and McDonald Is"/>
+<xsd:enumeration value="Honduras"/>
+<xsd:enumeration value="Hungary"/>
+<xsd:enumeration value="Iceland"/>
+<xsd:enumeration value="India"/>
+<xsd:enumeration value="Indonesia"/>
+<xsd:enumeration value="Ireland"/>
+<xsd:enumeration value="Israel"/>
+<xsd:enumeration value="Italy"/>
+<xsd:enumeration value="Jamaica"/>
+<xsd:enumeration value="Japan"/>
+<xsd:enumeration value="Jordan"/>
+<xsd:enumeration value="Kayakhstan"/>
+<xsd:enumeration value="Kenya"/>
+<xsd:enumeration value="Kiribati"/>
+<xsd:enumeration value="Korea, South"/>
+<xsd:enumeration value="Kuwait"/>
+<xsd:enumeration value="Kyrgyzstan"/>
+<xsd:enumeration value="Laos"/>
+<xsd:enumeration value="Latvia"/>
+<xsd:enumeration value="Lebanon"/>
+<xsd:enumeration value="Lesotho"/>
+<xsd:enumeration value="Liberia"/>
+<xsd:enumeration value="Liechtenstein"/>
+<xsd:enumeration value="Lithuania"/>
+<xsd:enumeration value="Luxembourg"/>
+<xsd:enumeration value="Madagascar"/>
+<xsd:enumeration value="Malawi"/>
+<xsd:enumeration value="Malaysia"/>
+<xsd:enumeration value="Maldives"/>
+<xsd:enumeration value="Mali"/>
+<xsd:enumeration value="Malta"/>
+<xsd:enumeration value="Marshall Is"/>
+<xsd:enumeration value="Mauritania"/>
+<xsd:enumeration value="Mauritius"/>
+<xsd:enumeration value="Martinique"/>
+<xsd:enumeration value="Mayotte"/>
+<xsd:enumeration value="Mexico"/>
+<xsd:enumeration value="Micronesia"/>
+<xsd:enumeration value="Moldova"/>
+<xsd:enumeration value="Monaco"/>
+<xsd:enumeration value="Mongolia"/>
+<xsd:enumeration value="Montserrat"/>
+<xsd:enumeration value="Morocco"/>
+<xsd:enumeration value="Mozambique"/>
+<xsd:enumeration value="Myanmar"/>
+<xsd:enumeration value="Namibia"/>
+<xsd:enumeration value="Nauru"/>
+<xsd:enumeration value="Nepal"/>
+<xsd:enumeration value="Netherlands, The"/>
+<xsd:enumeration value="Netherlands Antilles"/>
+<xsd:enumeration value="New Caledonia"/>
+<xsd:enumeration value="New Zealand"/>
+<xsd:enumeration value="Nicaragua"/>
+<xsd:enumeration value="Niger"/>
+<xsd:enumeration value="Nigeria"/>
+<xsd:enumeration value="Niue"/>
+<xsd:enumeration value="Norway"/>
+<xsd:enumeration value="Norfolk Island"/>
+<xsd:enumeration value="Northern Mariana Is"/>
+<xsd:enumeration value="Oman"/>
+<xsd:enumeration value="Pakistan"/>
+<xsd:enumeration value="Palau"/>
+<xsd:enumeration value="Panama"/>
+<xsd:enumeration value="Papua new Guinea"/>
+<xsd:enumeration value="Paraguay"/>
+<xsd:enumeration value="Peru"/>
+<xsd:enumeration value="Philippines"/>
+<xsd:enumeration value="Pitcairn Island"/>
+<xsd:enumeration value="Poland"/>
+<xsd:enumeration value="Portugal"/>
+<xsd:enumeration value="Puerto Rico"/>
+<xsd:enumeration value="Qatar"/>
+<xsd:enumeration value="Republic of the Congo"/>
+<xsd:enumeration value="Reunion"/>
+<xsd:enumeration value="Romania"/>
+<xsd:enumeration value="Russia"/>
+<xsd:enumeration value="Saint Helena"/>
+<xsd:enumeration value="Saint Kitts And Nevis"/>
+<xsd:enumeration value="Saint Lucia"/>
+<xsd:enumeration value="Saint Pierre and Miquelon"/>
+<xsd:enumeration value="Saint Vincent And The Grenadines"/>
+<xsd:enumeration value="Samoa"/>
+<xsd:enumeration value="San Marino"/>
+<xsd:enumeration value="Sao Tome and Principe"/>
+<xsd:enumeration value="Saudi Arabia"/>
+<xsd:enumeration value="Senegal"/>
+<xsd:enumeration value="Seychelles"/>
+<xsd:enumeration value="Sierra Leone"/>
+<xsd:enumeration value="Singapore"/>
+<xsd:enumeration value="Slovakia"/>
+<xsd:enumeration value="Slovenia"/>
+<xsd:enumeration value="Solomon Islands"/>
+<xsd:enumeration value="Somalia"/>
+<xsd:enumeration value="South Africa"/>
+<xsd:enumeration value="South Georgia;"/>
+<xsd:enumeration value="Spain"/>
+<xsd:enumeration value="Sri Lanka"/>
+<xsd:enumeration value="Suriname"/>
+<xsd:enumeration value="Svalbard And Jan Mayen Is"/>
+<xsd:enumeration value="Swaziland"/>
+<xsd:enumeration value="Sweden"/>
+<xsd:enumeration value="Switzerland"/>
+<xsd:enumeration value="Syria"/>
+<xsd:enumeration value="Taiwan"/>
+<xsd:enumeration value="Tajikistan"/>
+<xsd:enumeration value="Tanzania"/>
+<xsd:enumeration value="Thailand"/>
+<xsd:enumeration value="Timor-Leste"/>
+<xsd:enumeration value="Togo"/>
+<xsd:enumeration value="Tokelau"/>
+<xsd:enumeration value="Tonga"/>
+<xsd:enumeration value="Trinidad And Tobago"/>
+<xsd:enumeration value="Tunisia"/>
+<xsd:enumeration value="Turkey"/>
+<xsd:enumeration value="Turks And Caicos Is"/>
+<xsd:enumeration value="Turkmenistan"/>
+<xsd:enumeration value="Tuvalu"/>
+<xsd:enumeration value="Uganda"/>
+<xsd:enumeration value="Ukraine"/>
+<xsd:enumeration value="United Arab Emirates"/>
+<xsd:enumeration value="United Kingdom"/>
+<xsd:enumeration value="United States"/>
+<xsd:enumeration value="United States Minor Outlying Is"/>
+<xsd:enumeration value="Uruguay"/>
+<xsd:enumeration value="Uzbekistan"/>
+<xsd:enumeration value="Vanuatu"/>
+<xsd:enumeration value="Vatican City State (Holy See)"/>
+<xsd:enumeration value="Venezuela"/>
+<xsd:enumeration value="Vietnam"/>
+<xsd:enumeration value="Virgin Islands (British)"/>
+<xsd:enumeration value="Virgin Islands (US)"/>
+<xsd:enumeration value="Wallis And Futuna Islands"/>
+<xsd:enumeration value="Western Sahara"/>
+<xsd:enumeration value="Yemen"/>
+<xsd:enumeration value="Zambia"/>
+<xsd:enumeration value="Zimbabwe"/>
+<xsd:enumeration value="Hong Kong"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Source_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Source_State__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From State  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Source_Street__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From Street  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Source_Zip__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From Zip  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Supplier__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Supplier  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Tracking_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Tracking Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Warehouse__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warehouse  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Number_of_units_returned__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number of units returned  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Total_Price2__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Price  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Analysis_Required__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Analysis Required?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Contract_Start_end__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Contract Start/end  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Credit_Hold__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Credit Hold?  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Date_Processed__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Date Processed  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Download_To_Mobile__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Download To Mobile  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Finance_Flag__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Flag  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_From_Location_Email__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From Location Email  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_From_Sub_Inventory__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sub Inventory  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="30"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_ISB_Model__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Model  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="200"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Installed_Product__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Installed Product  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Interface_To_Oracle__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface To Oracle  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Processed"/>
+<xsd:enumeration value="Error"/>
+<xsd:enumeration value="Success"/>
+<xsd:enumeration value="Partial"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Message_For_Shipper__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Message For Shipper  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Operating_Unit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Operating Unit  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="82-Candela Corporation U.S. Ops"/>
+<xsd:enumeration value="166-Syneron-Candela, S.A. (O.U.)"/>
+<xsd:enumeration value="168-Candela Portugal - O.U."/>
+<xsd:enumeration value="170-Candela Italia S.R.L -O.U."/>
+<xsd:enumeration value="172-Candela United Kingdom. - O.U."/>
+<xsd:enumeration value="206-Candela France, S.A. - O.U."/>
+<xsd:enumeration value="209-Candela Germany, S.A. - O.U."/>
+<xsd:enumeration value="226-Bellarmonie - O.U."/>
+<xsd:enumeration value="268-Syneron Canada-O.U."/>
+<xsd:enumeration value="270-Syneron Medical Israel-O.U."/>
+<xsd:enumeration value="278-Syneron Germany-O.U."/>
+<xsd:enumeration value="286-Light Instrument Israel-O.U."/>
+<xsd:enumeration value="372-Candela Japan O.U."/>
+<xsd:enumeration value="371-Candela Australia O.U."/>
+<xsd:enumeration value="369-Syneron China O.U."/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Order_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Send Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Pay_In_Advance__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Pay In Advance?  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Ready_For_Oracle__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ready For Oracle  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Ship_Via__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ship Via  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="WAY;Saturday AM;FEDEX"/>
+<xsd:enumeration value="WAY;Saturday Standard;FEDEX"/>
+<xsd:enumeration value="WAY;Overnight Priority;FEDEX"/>
+<xsd:enumeration value="WAY;Overnight Standard;FEDEX"/>
+<xsd:enumeration value="WAY;Early AM;FEDEX"/>
+<xsd:enumeration value="WAY;PICK UP-CUSTOMER;PICK UP- CUSTOMER"/>
+<xsd:enumeration value="WAY;PICK UP-CANDELA REP;PICK UP-CANDELA REP"/>
+<xsd:enumeration value="WAY;FEDEX GROUND;FEDEX"/>
+<xsd:enumeration value="ESP;ADR Europa/Equipos inter (road);Crestschmar"/>
+<xsd:enumeration value="ESP;24/72h  (Consumables);DHL"/>
+<xsd:enumeration value="ESP;Global Fowarding - Export Europa/No Europa (avión);DHL Global Forwarding"/>
+<xsd:enumeration value="ESP;Consumibles (Portugal);Do Ferro"/>
+<xsd:enumeration value="ESP;HTT - (Equipos);HTT"/>
+<xsd:enumeration value="ESP;10h (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;12h (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;14h (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;19h (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;Canarias Urg 10h (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;8.30h (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;Canarias económico (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;Hoy (Spare parts);MRW"/>
+<xsd:enumeration value="ESP;TRINT-Paquete-De Puerta a Puerta;Transporte Interno"/>
+<xsd:enumeration value="ESP;Exprés (Spare parts inter);UPS"/>
+<xsd:enumeration value="ESP;Exprés Saver (Spare parts inter);UPS"/>
+<xsd:enumeration value="ILH;TNT;TNT"/>
+<xsd:enumeration value="ILH;TNT- Economy;TNT- Economy"/>
+<xsd:enumeration value="ILH;DHL;DHL"/>
+<xsd:enumeration value="ILH;FEDEX.;FEDEX"/>
+<xsd:enumeration value="ILH;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="ILH;UPS;UPS"/>
+<xsd:enumeration value="ILP;FEDEX.;FEDEX"/>
+<xsd:enumeration value="ILP;DHL;DHL"/>
+<xsd:enumeration value="IRV;2 DAY - Second day delivery by 3:30 PM -FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;EXPRESS SAVER - 3 days delivery by 3:30 PM - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;OTHER;FEDEX"/>
+<xsd:enumeration value="IRV;PON-Priority over Night by 10:30 AM -FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;FON-First over Night by 8:30 AM-FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;SATURDAY - Saturday delivery by 10:30 AM - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;LTL Freight - Ground freight delivery - see map - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;INTERNATIONAL ECONOMY 4 to 6 days delivery - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;Express Freight 2 day delivery by 12:00 PM - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;Express Freight 3 day delivery by 3:00 PM - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;GROUND - ground delivery - see map - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;INTERNATIONAL PRIORITY overnight to 3 days delivery - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;Express Freight 1 day delivery by 10:30 AM - FedEx;FEDEX"/>
+<xsd:enumeration value="IRV;Third Party - Independent trucking company;FEDEX"/>
+<xsd:enumeration value="IRV;SON -Standard over Night by 3:30 PM - FedEx;FEDEX"/>
+<xsd:enumeration value="LIP;DHL;DHL"/>
+<xsd:enumeration value="LIP;FEDEX Ground;FEDEX"/>
+<xsd:enumeration value="LIP;FLYING CARGO;FLYING CARGO"/>
+<xsd:enumeration value="LIP;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="LIP;TNT;TNT"/>
+<xsd:enumeration value="LIP;UPS.;UPS"/>
+<xsd:enumeration value="LIP;EMS;EMS"/>
+<xsd:enumeration value="CAN;UPS.;UPS"/>
+<xsd:enumeration value="CAN;OTHER;FEDEX"/>
+<xsd:enumeration value="CAN;FEDEX.;FEDEX"/>
+<xsd:enumeration value="CAN;Overnight Priority;FEDEX"/>
+<xsd:enumeration value="CAN;DHL GLOBAL FORWARDING;DHL Global Forwarding"/>
+<xsd:enumeration value="CAN;OVERNIGHT;BEST"/>
+<xsd:enumeration value="CAN;FEDEX Ground;FEDEX"/>
+<xsd:enumeration value="FRA;UPS.;UPS"/>
+<xsd:enumeration value="FRA;OTHER;FEDEX"/>
+<xsd:enumeration value="FRA;FEDEX Ground;FEDEX"/>
+<xsd:enumeration value="FRA;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="FRA;FedEx 1Day Freight;FEDEX"/>
+<xsd:enumeration value="FRA;FEDEX.;FEDEX"/>
+<xsd:enumeration value="FRA;Pick up by Candela;Pick up by Candela"/>
+<xsd:enumeration value="GBP;FedEx 1Day Freight;FEDEX"/>
+<xsd:enumeration value="GBP;OTHER;FEDEX"/>
+<xsd:enumeration value="GBP;FEDEX Ground;FEDEX"/>
+<xsd:enumeration value="GBP;TRINT-Paquete-De Puerta a Puerta;Transporte Interno"/>
+<xsd:enumeration value="GBP;UPS.;UPS"/>
+<xsd:enumeration value="GBP;FEDEX.;FEDEX"/>
+<xsd:enumeration value="GBP;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="GER;FEDEX Ground;FEDEX"/>
+<xsd:enumeration value="GER;FEDEX.;FEDEX"/>
+<xsd:enumeration value="GER;UPS.;UPS"/>
+<xsd:enumeration value="GER;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="GER;OTHER;FEDEX"/>
+<xsd:enumeration value="GER;FedEx 1Day Freight;FEDEX"/>
+<xsd:enumeration value="ITA;FEDEX Ground;FEDEX"/>
+<xsd:enumeration value="ITA;FedEx 1Day Freight;FEDEX"/>
+<xsd:enumeration value="ITA;UPS.;UPS"/>
+<xsd:enumeration value="ITA;FEDEX.;FEDEX"/>
+<xsd:enumeration value="ITA;OTHER;FEDEX"/>
+<xsd:enumeration value="ITA;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="JAP;SAGAWA Regular Shipping (Clinic)"/>
+<xsd:enumeration value="JAP;YAMATO Regular Shipping (Clinic)"/>
+<xsd:enumeration value="JAP;YAMATO Time-Appointed Shipping (Clinic)"/>
+<xsd:enumeration value="JAP;SAGAWA Regular Shipping (FSE)"/>
+<xsd:enumeration value="JAP;SAGAWA Counter-Collection Shipping (FSE)"/>
+<xsd:enumeration value="JAP;SAGAWA Airport-Collection Shipping (FSE)"/>
+<xsd:enumeration value="JAP;Kintetsu Airport-Collection Shipping (FSE)"/>
+<xsd:enumeration value="JAP;SAGAWA Regular Shipping (Branch Office)"/>
+<xsd:enumeration value="JAP : FSE : Pickup"/>
+<xsd:enumeration value="CHP;SF EXPRESS-Parcel-Standard;SF express"/>
+<xsd:enumeration value="CHP;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="CHP;Pick up by Juva currier;Pick up by Juva currier"/>
+<xsd:enumeration value="JPP;FSE Pick Up-Courier-DIRECT;FSE Pick UP"/>
+<xsd:enumeration value="JPP;近鉄ロジスティクス-Courier-Charter(Day and Time -Appointed);近鉄ロジスティクス・システムズ"/>
+<xsd:enumeration value="JPP;近鉄ロジスティクス-Courier-Standard;近鉄ロジスティクス・システムズ"/>
+<xsd:enumeration value="JPP;ヤマト運輸-Courier-Regular Shipping;ヤマト運輸"/>
+<xsd:enumeration value="JPP;ヤマト運輸-Courier-Time-Appointed;ヤマト運輸"/>
+<xsd:enumeration value="JPP;佐川急便-Courier-Counter - Collection;佐川急便"/>
+<xsd:enumeration value="JPP;近鉄エクスプレス-Courier-Airport - Collection;近鉄エクスプレス"/>
+<xsd:enumeration value="JPP;佐川急便-Courier-Regular Shipping;佐川急便"/>
+<xsd:enumeration value="AUP;Hand Carry;Hand Carry"/>
+<xsd:enumeration value="AUP;Next Flight Out-Courier-Standard;Next Flight Out"/>
+<xsd:enumeration value="AUP;Road Freight-Courier-Standard;Road Freight"/>
+<xsd:enumeration value="AUP;Road Freight-Courier-DIRECT;Road Freight"/>
+<xsd:enumeration value="AUP;COPE-Courier;COPE"/>
+<xsd:enumeration value="AUP;STARTRACK-Courier;STARTRACK"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Shipping_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Technician__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Technician  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Warranty_End_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warranty End Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Estimated_Price__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Estimated Price  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_of_RMA__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number of RMA  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Distributor_Account__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Distributor Account ?  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Company_Address__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Company Address  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC_Oracle_error_message__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Oracle error message  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32768"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Oracle_Order_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Oracle Order Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="15"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Loaner_Required__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Loaner Required  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_User_Service_Outputs_Language__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>User Service Outputs Language  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Warranty_Terms__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warranty Terms  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_of_Louner_lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number of Loaner lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_of_Oracle_SO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number of lines of backlog order  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_of_Repair_lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number of Repair lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_MFG_RMA__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>MFG RMA #  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Interface_user_s_permission_to_run__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface user&apos;s permission to run  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Ship_Via_Master__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ship Via Master  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="WAY"/>
+<xsd:enumeration value="ESP"/>
+<xsd:enumeration value="ILH"/>
+<xsd:enumeration value="ILP"/>
+<xsd:enumeration value="IRV"/>
+<xsd:enumeration value="LIP"/>
+<xsd:enumeration value="CAN"/>
+<xsd:enumeration value="FRA"/>
+<xsd:enumeration value="GER"/>
+<xsd:enumeration value="GBP"/>
+<xsd:enumeration value="ITA"/>
+<xsd:enumeration value="JAP"/>
+<xsd:enumeration value="CHP"/>
+<xsd:enumeration value="JPP"/>
+<xsd:enumeration value="AUP"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Returned_Material_Email__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Returned Material Email  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Total_Fulfilment_Qty__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Fulfilment Qty  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Customer_PO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Customer Service No  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Total_Expected_Qty__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Expected Qty  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Actual_Failure_date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Actual Failure Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Customer_Shipping_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Customer Shipping Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Region__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Region  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Interface_To_Oracle_Success__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface To Oracle Success?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_Completed_Shipment_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of Completed Shipment Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_Shipment_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of Shipment Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Need_Investigation__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Need Investigation  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Sent_Email__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sent Email  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Automatically_Closed__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Automatically Closed?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Defective_Stock_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Defective Stock Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Is_Warehouse_Managers__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Is Defective Stock Managers?  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_PO_To_Be_Approved_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>PO To Be Approved By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Sapporo"/>
+<xsd:enumeration value="Tokyo"/>
+<xsd:enumeration value="Nagoya"/>
+<xsd:enumeration value="Osaka"/>
+<xsd:enumeration value="Okayama"/>
+<xsd:enumeration value="Fukuoka"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Send_Email_To_From_Location_Email__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Send Email To From Location Email  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Service_Contract__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Contract  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Is_Shipping_Warehouse_Manager__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Is Shipping Warehouse Manager  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_User_Is_The_Technician__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>User Is The Technician  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_TotalCompleted_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of Total Completed Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_From_Warehouse__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>From Warehouse  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Billing_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billing Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_To_Location_Full_ID__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To Location Full ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_logistics_processed__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>logistics processed  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_VAT__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>VAT/GST  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="3"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Sent_Email_To_Warehouse__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sent Email To Warehouse  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Manager_Approval_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Manager Approval Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Service_Team__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Team  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Data_Entry_Notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data Entry Notes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_PO_Need_Approval__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>PO Need Approval  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Logistics_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Logistics Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Partial received"/>
+<xsd:enumeration value="Fully received"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Logistics_Notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Logistics Notes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Service_Contract_Name__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Contract Name  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_To_Unused_Sub_Inventory__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>To Unused Sub-Inventory  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Oralce_SO_For_Email_Alert__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Oralce SO For Email Alert  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Packing_Instructions__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Packing Instructions  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Recent_Pulse_Count__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Recent Pulse Count  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Ship_Via_Code__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ship Via Code  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_Partial_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of Partial Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Approved_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Approved By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="200"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_Completed_RMA_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of Completed RMA Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Invoke_Outbound_Message__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Invoke Outbound Message  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Number_Of_RMA_Required_Lines__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Number Of RMA Required Lines  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_No_RMA_Line_Flag__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>RMA Required Flag  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Special_Delivery_Instructions__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Special Delivery Instructions  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Installed_Product_Lookup__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Installed Product  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Problem_Type_PO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Problem Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Aiming beam"/>
+<xsd:enumeration value="Alignment"/>
+<xsd:enumeration value="Applicator\Handpiece\Transducer"/>
+<xsd:enumeration value="Applicators"/>
+<xsd:enumeration value="Articulated Arm"/>
+<xsd:enumeration value="Audio\Sound\Speaker"/>
+<xsd:enumeration value="Cal./Adj."/>
+<xsd:enumeration value="Camera"/>
+<xsd:enumeration value="Chronic Fault"/>
+<xsd:enumeration value="Communication"/>
+<xsd:enumeration value="Computer"/>
+<xsd:enumeration value="Computer module\Hard Disk"/>
+<xsd:enumeration value="Connectors"/>
+<xsd:enumeration value="consumables"/>
+<xsd:enumeration value="Cooling"/>
+<xsd:enumeration value="Cooling / Temperature"/>
+<xsd:enumeration value="Cooling leakage"/>
+<xsd:enumeration value="Cooling problem"/>
+<xsd:enumeration value="Cooling - Temperature\ IR sensor faults"/>
+<xsd:enumeration value="Cooling water Flow"/>
+<xsd:enumeration value="DCD"/>
+<xsd:enumeration value="Display\Screen\Touchscreen"/>
+<xsd:enumeration value="DYE"/>
+<xsd:enumeration value="Electronic"/>
+<xsd:enumeration value="Energy problem"/>
+<xsd:enumeration value="Error message/ Software"/>
+<xsd:enumeration value="Fan(s) fault(s)"/>
+<xsd:enumeration value="FBR/SLDR"/>
+<xsd:enumeration value="Fiber"/>
+<xsd:enumeration value="Fire/Explosion/Smoke"/>
+<xsd:enumeration value="Fluid syst"/>
+<xsd:enumeration value="FootSwitch"/>
+<xsd:enumeration value="H/V"/>
+<xsd:enumeration value="Handpiece"/>
+<xsd:enumeration value="Hose\tube\strain relief"/>
+<xsd:enumeration value="HV"/>
+<xsd:enumeration value="HVPS"/>
+<xsd:enumeration value="Ignition"/>
+<xsd:enumeration value="Information"/>
+<xsd:enumeration value="Injury"/>
+<xsd:enumeration value="Inspection"/>
+<xsd:enumeration value="Installation"/>
+<xsd:enumeration value="Jumping lens"/>
+<xsd:enumeration value="Laser"/>
+<xsd:enumeration value="Laser\Light"/>
+<xsd:enumeration value="Locking"/>
+<xsd:enumeration value="Low energy"/>
+<xsd:enumeration value="Low Water Level or Pressure"/>
+<xsd:enumeration value="Mechanical"/>
+<xsd:enumeration value="Mechanical damage"/>
+<xsd:enumeration value="Noisy system"/>
+<xsd:enumeration value="No Laser / No Laser Energy"/>
+<xsd:enumeration value="No Problem"/>
+<xsd:enumeration value="OLED"/>
+<xsd:enumeration value="OLED / Display"/>
+<xsd:enumeration value="Optical"/>
+<xsd:enumeration value="Orange\Red pulses"/>
+<xsd:enumeration value="Other"/>
+<xsd:enumeration value="Out Of Box Failure"/>
+<xsd:enumeration value="Out Of Box Failure / DOA"/>
+<xsd:enumeration value="PM Request"/>
+<xsd:enumeration value="Power on"/>
+<xsd:enumeration value="Power Supply"/>
+<xsd:enumeration value="Red skin /Bubbles / Injury"/>
+<xsd:enumeration value="Reset"/>
+<xsd:enumeration value="RF"/>
+<xsd:enumeration value="Safety Test"/>
+<xsd:enumeration value="Sales Support"/>
+<xsd:enumeration value="Shutter"/>
+<xsd:enumeration value="Software"/>
+<xsd:enumeration value="Spray system"/>
+<xsd:enumeration value="Swap"/>
+<xsd:enumeration value="Switches \ Buttons"/>
+<xsd:enumeration value="System Modification"/>
+<xsd:enumeration value="Terminal"/>
+<xsd:enumeration value="Transducer"/>
+<xsd:enumeration value="Umbilical"/>
+<xsd:enumeration value="Upgrade"/>
+<xsd:enumeration value="USB"/>
+<xsd:enumeration value="Vacuum sys"/>
+<xsd:enumeration value="Water cooling system"/>
+<xsd:enumeration value="Wrong Item Sent / Missing Items"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Problem_Type_Master_PO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Problem Type Master  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Applicators"/>
+<xsd:enumeration value="IPL / RF"/>
+<xsd:enumeration value="Laser"/>
+<xsd:enumeration value="UltraSound"/>
+<xsd:enumeration value="Vela"/>
+<xsd:enumeration value="Candela"/>
+<xsd:enumeration value="Default"/>
+<xsd:enumeration value="Light"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Subject_PO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Subject  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Description_PO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Description  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32768"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_FOB__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>FOB  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Shipping Point"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Freight_terms__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Freight terms  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Prepaid"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Invoice_notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Invoice notes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="WARRANTY REPLACEMENT PARTS VALUE FOR CUSTOMS PURPOSE ONLY $150.00"/>
+<xsd:enumeration value="WARRANTY REPLACEMENT PARTS, VALUE FOR CUSTOMS PURPOSE ONLY"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Payment_terms__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Payment terms  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Net 30"/>
+<xsd:enumeration value="Net 60"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Created_By_A_Distributor__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created By A Distributor  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Location_Address__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Location Address  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Distributor_Approval_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Distributor Approval Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Product_Company__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Product Company  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_USA_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status USA  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_France_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status France  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Germany_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status Germany  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Italy_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status Italy  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Spain_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status Spain  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Israel_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status Israel  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Australia_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status Australia  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Japan_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status Japan  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_China_Finance_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Finance Status China  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Approved"/>
+<xsd:enumeration value="Rejected"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Credit_Hold_in_Operating_Unit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Credit Hold in Operating Unit  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Emergency_Shipment__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Emergency Shipment  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Reason__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Reason  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32768"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_DOA__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>DOA  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="System"/>
+<xsd:enumeration value="Applicator"/>
+<xsd:enumeration value="Other/Component"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Customer_Consolidation_Ship_Day__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Customer Consolidation Ship Day  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Created_From_Technician_Location__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created From Technician Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Distributor_s_Rejected_PO_Email_To__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Distributor&apos;s Rejected PO Email To  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="ChildObjects" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="SVMXC__RMA_Shipment_Line__c">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="row" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="SOQL" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="WHERE" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Fields" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="type" type="xsd:string" minOccurs="0"/>
+<xsd:element name="Id" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Record ID  Filterable. IdLookup. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="IsDeleted" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deleted  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Name" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Line Number  Filterable. IdLookup. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="80"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CurrencyIsoCode" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Currency ISO Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3"/>
+<xsd:enumeration value="AUD"/>
+<xsd:enumeration value="GBP"/>
+<xsd:enumeration value="CAD"/>
+<xsd:enumeration value="CNY"/>
+<xsd:enumeration value="EUR"/>
+<xsd:enumeration value="ILS"/>
+<xsd:enumeration value="JPY"/>
+<xsd:enumeration value="USD"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="RecordTypeId" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Record Type ID  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CreatedDate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created Date  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="CreatedById" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Created By ID  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastModifiedDate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Modified Date  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastModifiedById" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Modified By ID  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SystemModstamp" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>System Modstamp  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="LastActivityDate" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Last Activity Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__RMA_Shipment_Order__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Parts Order  Filterable. Createable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Actual_Quantity2__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Actual Qty  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Actual_Receipt_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Actual Receipt Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Actual_Ship_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Actual Ship Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Canceled_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Canceled By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Canceled_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Canceled On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Case_Line__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Case Line  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Closed_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Closed By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Closed_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Closed On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Delivered_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Delivered By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Delivered_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Delivered On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Delivered__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Delivered?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Delivery_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Delivery Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Discount_Percentage__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Discount %  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="6"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Disposition_Instructions__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Disposition Instructions  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Disposition__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Disposition  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Unused"/>
+<xsd:enumeration value="Incorrect Part"/>
+<xsd:enumeration value="Failed Upon Install (DOA)"/>
+<xsd:enumeration value="Failed During Testing (DOA)"/>
+<xsd:enumeration value="Shipping Damage (DOA)"/>
+<xsd:enumeration value="Used And Returned Original"/>
+<xsd:enumeration value="Warranty Parts Order"/>
+<xsd:enumeration value="Defective"/>
+<xsd:enumeration value="Billable Parts Order"/>
+<xsd:enumeration value="Loaner"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Entitled_Exchange_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Entitled Exchange Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Advance Exchange"/>
+<xsd:enumeration value="Return Exchange"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Entitlement_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Entitlement Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Entitled To Warranty"/>
+<xsd:enumeration value="Not Entitled"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Expected_Condition__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Expected Condition  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Good/Working"/>
+<xsd:enumeration value="Defective"/>
+<xsd:enumeration value="Shipping Damage"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Expected_Quantity2__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Expected Qty  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Expected_Receipt_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Expected Receipt Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Expected_Ship_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Expected Ship Date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Fulfillment_Qty__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Fulfillment Qty  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Line_Price2__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Line Price  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Line_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Line Status  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Open"/>
+<xsd:enumeration value="Processing"/>
+<xsd:enumeration value="Completed"/>
+<xsd:enumeration value="Canceled"/>
+<xsd:enumeration value="Picked"/>
+<xsd:enumeration value="Partial"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Line_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Line Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Inbound (RMA)"/>
+<xsd:enumeration value="Outbound (Shipment)"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Master_Order_Line__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Master Order Line  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Packing_Instructions__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Packing Instructions  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32000"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Parts_Request_Line__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Parts Request Line  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Picked_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Picked By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Picked_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Picked On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Picked_Qty__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Picked Qty  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="4"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Picked__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Picked?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Posted_To_Inventory__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Posted To Inventory  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Product__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Product  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Received_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Received By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Received_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Received On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Received__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Received?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Reconciliation_Action__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Reconciliation Action  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Add"/>
+<xsd:enumeration value="Remove"/>
+<xsd:enumeration value="Hold"/>
+<xsd:enumeration value="Replace"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Returned_Condition__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Returned Condition  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="As Expected"/>
+<xsd:enumeration value="Shipping Damage"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Route_Card__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Route Card  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Route_Stop__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Route Stop  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Sales_Order_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Sales Order Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Select__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Select  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Serial_Number_List__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Serial Number  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32768"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Serial_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>IB Serial Number  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Contract_End_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Contract End Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Contract_Start_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Contract Start Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Engineer__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Engineer  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Order_Line__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Work Details  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Service_Order__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Work Order  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Ship_Location__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Return/Ship Location  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipped_By__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipped By  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipped_On__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipped On  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Shipped__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipped?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Total_Line_Price2__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Line Price  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Use_Price_From_Pricebook__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Use Price From Pricebook  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Warehouse__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warehouse  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Warranty_End_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warranty End Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Warranty_Start_Date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warranty Start Date  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMXC__Work_Order_Created__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Work Order Created?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Billable_Parts__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Billable Parts  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Download_To_Mobile__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Download To Mobile  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Model__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Model  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Product_Family__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Product Family  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Part_Request_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Part Request Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Loaner"/>
+<xsd:enumeration value="Repair"/>
+<xsd:enumeration value="Exchange"/>
+<xsd:enumeration value="Billing Only"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Product_Code__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Product Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_RMA_Required__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>RMA Required  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Removed_Part_Serial__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Removed Part Serial  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Serial_Part_Text__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Serial Part (Text)  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="30"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Stocked_Part__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Stocked Part  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Stocked_Serial__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Stocked Serial  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Tracking__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Tracking  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="30"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Line_Date_Processed__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Line Date Processed  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:dateTime">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Interface_To_Oracle__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Interface To Oracle  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Processed"/>
+<xsd:enumeration value="Error"/>
+<xsd:enumeration value="Success"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Oracle_Error_Message__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Oracle Error Message  Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="32768"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Product_Full_ID__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Product Full ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_On_Hold__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>On Hold  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Warranty_Terms__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warranty Terms  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Warranty_end_date__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warranty end date  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:date">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Shipping_Instructions__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Shipping Instructions  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_MFG_RMA__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>MFG RMA #  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Repair_Type__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Repair Type  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="BIG REPAIR"/>
+<xsd:enumeration value="SMALL REPAIR"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Total_Line_Price_Per_Unit__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Total Line Price Per Unit  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Removed_Part__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Removed Part  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Removed_Part_Code__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Removed Part Code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_SerialNumberFor_Convert_Ship_To_RMA__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Serial Number For Convert Ship To RMA  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="40"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Return_Notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Return Notes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Full_ID__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Full ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Ship_on_Oracle_SO__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Ship on Oracle SO  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="30"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Japanese_Product_Description__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Japanese Product Description  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Japanese_Removed_Part_Description__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Japanese Removed Part Description  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Service_Contract_ID__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Contract ID  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Service_Contract__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Service Contract  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Requested_Product__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Requested Product  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Requested_Product_Code__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Requested Product Code  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Is_Lot__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Is Lot?  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Warehouse__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Warehouse  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_RMA_Temp_Warehouse__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>RMA Temp Warehouse  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Enable_Serialized_Tracking_of_Stock__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Enable Serialized Tracking of Stock  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Line_Status__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Line Status.  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Return_To__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Record Type From\To  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Lot_Number__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Lot Number  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Requested_Installed_Product__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Requested Installed Product  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="260"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_WO_Not_Available__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>WO Not Available  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Work_Order_Name__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Work Order Name  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="1300"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Discount__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Discount #  Filterable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="19"/>
+<xsd:fractionDigits value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Confirm_To_Order_Obsolete_Part__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Order Obsolete Part  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Not_Orderable_For_Field_Service__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Not Orderable For Field Service  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Replaced_By_Product_code__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Replaced By Product code  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Logistics_Notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Logistics Notes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Send_Me_Email_Upon_Receipt__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Send Me Email Upon Receipt  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Receipted_Email_Was_Sent__c" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Receipted Email Was Sent  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:boolean">
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Invoice_notes__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Invoice notes  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Partial_Shipment__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Partial Shipment  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:decimal">
+<xsd:totalDigits value="18"/>
+<xsd:fractionDigits value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Payment_Terms__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Payment Terms  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="Waiting For LOV"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="Distributor_PO_Sources__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Distributor PO Sources  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="100"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="SVMX_Dead_On_Arrival__c" nillable="true" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Dead On Arrival  Filterable. Createable. Updateable. </xsd:documentation>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+<xsd:enumeration value="System"/>
+<xsd:enumeration value="Applicator"/>
+<xsd:enumeration value="Other/Component"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Return" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Id" type="xsd:string"/>
+<xsd:element name="Success" type="xsd:boolean"/>
+<xsd:element name="Errors" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="error"  minOccurs="0" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="StatusCode" type="xsd:string"/>
+<xsd:element name="message" type="xsd:string"/>
+<xsd:element name="fields" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="Return" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="Id" type="xsd:string"/>
+<xsd:element name="Success" type="xsd:boolean"/>
+<xsd:element name="Created" minOccurs="0" type="xsd:boolean"/>
+<xsd:element name="Errors" minOccurs="0">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="error"  minOccurs="0" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="StatusCode" type="xsd:string"/>
+<xsd:element name="message" type="xsd:string"/>
+<xsd:element name="fields" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

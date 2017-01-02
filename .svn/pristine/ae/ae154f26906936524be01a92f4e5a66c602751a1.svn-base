@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Resource_Settings>
+
+  <Resource_Element>
+    <Main_Resource_ID>106</Main_Resource_ID>
+    <Main_Resource_Name>Email</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>109</Main_Resource_ID>
+    <Main_Resource_Name>FTP</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>110</Main_Resource_ID>
+    <Main_Resource_Name>HTTP</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>115</Main_Resource_ID>
+    <Main_Resource_Name>JMS</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>117</Main_Resource_ID>
+    <Main_Resource_Name>WebSphereMQ</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>118</Main_Resource_ID>
+    <Main_Resource_Name>MSMQ</Main_Resource_Name>
+  </Resource_Element>
+
+</Resource_Settings>

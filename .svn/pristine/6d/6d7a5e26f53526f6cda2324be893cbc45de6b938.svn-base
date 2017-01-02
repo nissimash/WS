@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Resource_Settings>
+
+  <Resource_Element>
+    <Main_Resource_ID>104</Main_Resource_ID>
+    <Main_Resource_Name>Domino</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>106</Main_Resource_ID>
+    <Main_Resource_Name>Email</Main_Resource_Name>
+    <Default_Resource>mail</Default_Resource>
+    <Main_Resource_Defintion>
+      <Resource_Type_ID>33</Resource_Type_ID>
+      <Resource_Type_Name>mail</Resource_Type_Name>
+      <Resource_Type_Description/>
+      <Resource_Type_Blob>TgB1AGwAbABCAGwAbwBiAA==</Resource_Type_Blob>
+      <Resource_Properties>
+        <ID>8</ID>
+        <Name>From Address</Name>
+        <ExpressionValue>magic@syneron.com</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>2</ID>
+        <Name>Incoming Mail Server</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>3</ID>
+        <Name>Incoming Port</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>4</ID>
+        <Name>Incoming Secure Connection</Name>
+        <ExpressionValue>0</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>5</ID>
+        <Name>Outgoing Mail Server</Name>
+        <ExpressionValue>wl-mail10</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>6</ID>
+        <Name>Outgoing Port</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>7</ID>
+        <Name>Outgoing Secure Connection</Name>
+        <ExpressionValue>0</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>10</ID>
+        <Name>Password</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>1</ID>
+        <Name>Server Type</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>9</ID>
+        <Name>User</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+    </Main_Resource_Defintion>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>109</Main_Resource_ID>
+    <Main_Resource_Name>FTP</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>110</Main_Resource_ID>
+    <Main_Resource_Name>HTTP</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>111</Main_Resource_ID>
+    <Main_Resource_Name>System i</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>115</Main_Resource_ID>
+    <Main_Resource_Name>JMS</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>117</Main_Resource_ID>
+    <Main_Resource_Name>WebSphereMQ</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>118</Main_Resource_ID>
+    <Main_Resource_Name>MSMQ</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>121</Main_Resource_ID>
+    <Main_Resource_Name>Web Services Client</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>128</Main_Resource_ID>
+    <Main_Resource_Name>SAP B1 2004</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>133</Main_Resource_ID>
+    <Main_Resource_Name>SAP B1 2005</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>134</Main_Resource_ID>
+    <Main_Resource_Name>W4</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>140</Main_Resource_ID>
+    <Main_Resource_Name>SAP R3</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>141</Main_Resource_ID>
+    <Main_Resource_Name>SAP B1 2007</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>143</Main_Resource_ID>
+    <Main_Resource_Name>Salesforce</Main_Resource_Name>
+    <Default_Resource>ServiceMAX</Default_Resource>
+    <Main_Resource_Defintion>
+      <Resource_Type_ID>34</Resource_Type_ID>
+      <Resource_Type_Name>ServiceMAX</Resource_Type_Name>
+      <Resource_Type_Description/>
+      <Resource_Type_Blob>TgB1AGwAbABCAGwAbwBiAA==</Resource_Type_Blob>
+      <Resource_Properties>
+        <ID>5</ID>
+        <Name>Allow Field Truncation</Name>
+        <ExpressionValue>1</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>6</ID>
+        <Name>Connection Caching Level</Name>
+        <ExpressionValue>2</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>4</ID>
+        <Name>Endpoint URL</Name>
+        <ExpressionValue>https://test.salesforce.com/services/Soap/u/28.0</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>3</ID>
+        <Name>ObjectsList</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob>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</ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>2</ID>
+        <Name>Password</Name>
+        <ExpressionValue>yPlZDNSyV8wW61LYpdBjrA==</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>1</ID>
+        <Name>User Name</Name>
+        <ExpressionValue>ebiz@syneron.com.newdev2016</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+    </Main_Resource_Defintion>
+    <Main_Resource_Defintion>
+      <Resource_Type_ID>35</Resource_Type_ID>
+      <Resource_Type_Name>ServiceMAX_prod</Resource_Type_Name>
+      <Resource_Type_Description>PROD</Resource_Type_Description>
+      <Resource_Type_Blob>TgB1AGwAbABCAGwAbwBiAA==</Resource_Type_Blob>
+      <Resource_Properties>
+        <ID>5</ID>
+        <Name>Allow Field Truncation</Name>
+        <ExpressionValue>1</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>6</ID>
+        <Name>Connection Caching Level</Name>
+        <ExpressionValue>2</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>4</ID>
+        <Name>Endpoint URL</Name>
+        <ExpressionValue>https://login.salesforce.com/services/Soap/u/28.0</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>3</ID>
+        <Name>ObjectsList</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob>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</ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>2</ID>
+        <Name>Password</Name>
+        <ExpressionValue>yPlZDNSyV8wW61LYpdBjrA==</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>1</ID>
+        <Name>User Name</Name>
+        <ExpressionValue>ebiz@syneron.com</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+    </Main_Resource_Defintion>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>144</Main_Resource_ID>
+    <Main_Resource_Name>Notes DB</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>145</Main_Resource_ID>
+    <Main_Resource_Name>JD Edwards EnterpriseOne</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>149</Main_Resource_ID>
+    <Main_Resource_Name>HL7</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>150</Main_Resource_ID>
+    <Main_Resource_Name>Magic xpi Server</Main_Resource_Name>
+    <Default_Resource>Default Magic xpi Server</Default_Resource>
+    <Main_Resource_Defintion>
+      <Resource_Type_ID>32</Resource_Type_ID>
+      <Resource_Type_Name>Default Magic xpi Server</Resource_Type_Name>
+      <Resource_Type_Description/>
+      <Resource_Type_Blob>TgB1AGwAbABCAGwAbwBiAA==</Resource_Type_Blob>
+      <Resource_Properties>
+        <ID>1</ID>
+        <Name>Host Name</Name>
+        <ExpressionValue>%HostName%</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>2</ID>
+        <Name>Port</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+    </Main_Resource_Defintion>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>151</Main_Resource_ID>
+    <Main_Resource_Name>Google</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>152</Main_Resource_ID>
+    <Main_Resource_Name>LDAP</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>153</Main_Resource_ID>
+    <Main_Resource_Name>SAP A1</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>156</Main_Resource_ID>
+    <Main_Resource_Name>Dynamics CRM</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>157</Main_Resource_ID>
+    <Main_Resource_Name>Exchange 2007</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>159</Main_Resource_ID>
+    <Main_Resource_Name>SharePoint</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>160</Main_Resource_ID>
+    <Main_Resource_Name>SAP B1 88</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>161</Main_Resource_ID>
+    <Main_Resource_Name>JD Edwards World</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>162</Main_Resource_ID>
+    <Main_Resource_Name>SugarCRM</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>9000</Main_Resource_ID>
+    <Main_Resource_Name>Web Services Server</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>9001</Main_Resource_ID>
+    <Main_Resource_Name>UDDI Server</Main_Resource_Name>
+  </Resource_Element>
+
+  <Resource_Element>
+    <Main_Resource_ID>10000</Main_Resource_ID>
+    <Main_Resource_Name>Database</Main_Resource_Name>
+    <Main_Resource_Defintion>
+      <Resource_Type_ID>10002</Resource_Type_ID>
+      <Resource_Type_Name>ORACLE</Resource_Type_Name>
+      <Resource_Type_Description>either CANUAT or PROD using user readapps</Resource_Type_Description>
+      <Resource_Type_Blob>TgB1AGwAbABCAGwAbwBiAA==</Resource_Type_Blob>
+      <Resource_Properties>
+        <ID>5</ID>
+        <Name>Connect String</Name>
+        <ExpressionValue>YES</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>1</ID>
+        <Name>DBMS</Name>
+        <ExpressionValue>14</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>4</ID>
+        <Name>Data Source name</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>20</ID>
+        <Name>DataB name - sort (Lowercase)</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>6</ID>
+        <Name>Database alias</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>2</ID>
+        <Name>Database name</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>22</ID>
+        <Name>Filter Owner</Name>
+        <ExpressionValue>APPLSYS</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>24</ID>
+        <Name>Filters data</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob>TUdCVCw3LDExMTAs/zYsQU5BQUJBfywxMDAsMjD28vkz/PD98zUxLDMs/zAsT1JBQ0xFgSAZDysPPQ9PD2EPZQBB/Qjc/1hYU05STv0uiwNfQ09OVl8fSVRFTVNlD7QPxg8Q2A/dAZIP3QkB3Q8fHzEfAEMfVR9gFxMPgx+VH6cfuR/ybQgJeQ+LBk9NX1P/TTJPQV9MSU7/RVNfSU5URVIHRkFDdx8bLy0v4Q3zHwAFJw0ffS+PL6Evsy9nH9cvIOkv+y8NPx8/dAEK2B/qHz9IRUFERVIBL3I/AIQ/lj9KLFs/ay/bP+0//z8UEU8eSSw3PyxNR0JU</ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>25</ID>
+        <Name>Library Details</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>23</ID>
+        <Name>ODBC Driver Name</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>8</ID>
+        <Name>Password</Name>
+        <ExpressionValue>P+quQ4+nvug=</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>3</ID>
+        <Name>Server</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>9</ID>
+        <Name>Starting Owner</Name>
+        <ExpressionValue>XXSNRN</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>7</ID>
+        <Name>User</Name>
+        <ExpressionValue>readapps</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+    </Main_Resource_Defintion>
+    <Main_Resource_Defintion>
+      <Resource_Type_ID>10003</Resource_Type_ID>
+      <Resource_Type_Name>ORACLE_Update</Resource_Type_Name>
+      <Resource_Type_Description/>
+      <Resource_Type_Blob>TgB1AGwAbABCAGwAbwBiAA==</Resource_Type_Blob>
+      <Resource_Properties>
+        <ID>5</ID>
+        <Name>Connect String</Name>
+        <ExpressionValue>YES</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>1</ID>
+        <Name>DBMS</Name>
+        <ExpressionValue>14</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>4</ID>
+        <Name>Data Source name</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>20</ID>
+        <Name>DataB name - sort (Lowercase)</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>6</ID>
+        <Name>Database alias</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>2</ID>
+        <Name>Database name</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>22</ID>
+        <Name>Filter Owner</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>24</ID>
+        <Name>Filters data</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>25</ID>
+        <Name>Library Details</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>23</ID>
+        <Name>ODBC Driver Name</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>8</ID>
+        <Name>Password</Name>
+        <ExpressionValue>+57VHHlOr0Jb5ZDyxw51vQ==</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>3</ID>
+        <Name>Server</Name>
+        <ExpressionValue></ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>9</ID>
+        <Name>Starting Owner</Name>
+        <ExpressionValue>XXSNRN</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+      <Resource_Properties>
+        <ID>7</ID>
+        <Name>User</Name>
+        <ExpressionValue>SMAX</ExpressionValue>
+        <ExpressionValueBlob></ExpressionValueBlob>
+      </Resource_Properties>
+    </Main_Resource_Defintion>
+  </Resource_Element>
+
+</Resource_Settings>
